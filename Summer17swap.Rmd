@@ -158,4 +158,16 @@ grid.arrange(tw, mfw)
 
 # So, females are the ones eclosing later and coming out smaller for the most part.  Males don't show any real significant difference.  Opposite of what other studies in the lab seem to have shown when looking at sex differences, where males are more responsive to fitness challenges.  Most likely explanation is that my data are wrong and the existing evidence is correct.
 
+
+
+swap.model <- swap.orig
+
+swap.model$dead <- ifelse(swap.model$Dead.=="y","1","0")
+swap.model$dead <- as.factor(swap.model$dead)
+
+m1 <- lm(dead ~ Treatment.ID, data = swap.model)
+summary(m1)$coef
+
+
+
 ```
