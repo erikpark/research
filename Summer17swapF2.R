@@ -3,6 +3,7 @@ library(gridExtra)
 library(tidyr)
 library(alr4)
 library(GGally)
+library(lmtest)
 
 f2.orig <- read.csv("Microbiome swap F2's - Sheet1.csv")
 
@@ -85,7 +86,7 @@ anova(mred.size,mmid.size)
 
 anova(mmid.size, mfull.size)
 
-mtest.size <- lm(Adult.size ~ BB.weight, data = f2.fixed)
+mtest.size <- lm(Adult.size^2 ~ Treatment.ID + Sex + log(BB.weight):Maternal.size, data = f2.fixed)
 summary(mtest.size)
 
 #Testing variance
@@ -103,6 +104,10 @@ table1=rbind(with(Z1,c(Df,ChiSquare,p)),with(Z2,c(Df,ChiSquare,p)),with(Z3,c(Df,
 row.names(table1)=c("Treatment","Sex","Treatment,Sex","Interaction","Fitted values")
 colnames(table1)=c("df","Test statistic","p-Value")
 table1
+
+mtest.size <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight:Maternal.size, data = f2.fixed, weights = Treatment.ID)
+
+coeftest(mmid.size, vcov=hccm)
 # So, looks like all regressors except for treatment are well explained by constant variance, but treatment is very close to non-significant, and is a factor (so can't use it as the weight)
 # So it might be okay just the assume all the regressors have constant variance.
 
