@@ -6,7 +6,7 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, tidy = TRUE)
 ```
 
 
@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 library(ggpubr)
 library(gridExtra)
+library(alr4)
+library(ggsignif)
 
 
 
@@ -21,6 +23,10 @@ swap.orig <- read.csv("Microbiome swap data - Sheet1.csv")
 
 
 treatments <- swap.orig$Treatment.ID
+
+# Separating the original data into male and female
+swap.male <- swap.orig[swap.orig$Sex == "m",]
+swap.female <- swap.orig[swap.orig$Sex == "f",]
 
 dead <- swap.orig[swap.orig$Dead. == "y",]
 alive <- swap.orig[swap.orig$Dead. == "",]
@@ -114,7 +120,7 @@ tw <- ggplot(alive, aes(x = Treatment.ID, y = ATW)) + geom_boxplot() + stat_comp
   stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
                vjust = +1.5, size = 4) + labs(title = "Adult thorax width")
 
-ggplot(survivals, aes(x = treatment, y = survivals)) + geom_point() 
+ggplot(survivals, aes(x = treatment, y = survivals)) + geom_point() + expand_limits(y = 0)
 
 # two-proportions z-test, tests for significance in difference between porpotions for two populations that are:
 # independent, large enough (>=5) (sg?), randomly selected. 
@@ -159,6 +165,19 @@ grid.arrange(tw, mfw)
 # So, females are the ones eclosing later and coming out smaller for the most part.  Males don't show any real significant difference.  Opposite of what other studies in the lab seem to have shown when looking at sex differences, where males are more responsive to fitness challenges.  Most likely explanation is that my data are wrong and the existing evidence is correct.
 
 
+# Below plots for pupal time of males and females
+mp <- ggplot(swap.male, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + stat_compare_means(method = "wilcox.test", comparisons = list(c("gg","gs"), c("sg","ss"))) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.5, size = 4) + labs(title = "Time to Pupation - males only")
+
+fp <- ggplot(swap.female, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + stat_compare_means(method = "wilcox.test", comparisons = list(c("gg","gs"), c("sg","ss"))) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.5, size = 4) + labs(title = "Time to Pupation - females only")
+
+mfp <- grid.arrange(mp,fp, ncol = 2)
+
+grid.arrange(f, mfp)
+
 
 swap.model <- swap.orig
 
@@ -168,6 +187,109 @@ swap.model$dead <- as.factor(swap.model$dead)
 m1 <- lm(dead ~ Treatment.ID, data = swap.model)
 summary(m1)$coef
 
+m2 <- lm(AT ~ Treatment.ID, data = swap.model)
+summary(m2)
+linearHypothesis(m2, "Treatment.IDsg=Treatment.IDss")
+# So, see that there is a significant difference between groups gg and gs in terms of adult time.
+m2sex <- update(m2, ~. + Sex)
+summary(m2sex)
+# Still seems to be significant when sex is considered.
 
+m3 <- lm(ATW ~ Treatment.ID, data = swap.model)
+summary(m3)
+linearHypothesis(m3, "Treatment.IDsg=Treatment.IDss")
+# So, no real difference between adult size for the different groups.
+
+m4 <- lm(PT ~ Treatment.ID, data = swap.model)
+summary(m4)
+linearHypothesis(m4, "Treatment.IDsg=Treatment.IDss")
+# Real difference in pupal time between the gazella treatments.
+m4s <- update(m4, ~. + Sex)
+summary(m4s)
+# Sex might be having an effect too?
+
+```
+
+
+
+```{r}
+
+gazella.data <- rbind(gg,gs)
+
+gazella.male <- gazella.data[gazella.data$Sex == "m",]
+gazella.female <- gazella.data[gazella.data$Sex == "f",]
+
+fun_length <- function(x){
+  return(data.frame(y=median(x),label= paste0("n=", length(x))))
+}
+
+# Plot for gazella pupal time
+pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.3, size = 4) + labs(title = "Time to pupation for all individuals") + 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+
+mp <- ggplot(gazella.male, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.3, size = 4) + labs(title = "Time to Pupation - males only")+ 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+
+fp <- ggplot(gazella.female, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.3, size = 4) + labs(title = "Time to Pupation - females only")+ 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+
+mfp <- grid.arrange(mp,fp, ncol = 2)
+
+grid.arrange(pt, mfp)
+
+
+# Weight at pupa day 3
+
+pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.2, size = 4) + labs(title = "Weight at pupa day 3 for all individuals")+ 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+pw
+
+# Time to adult eclosion
+
+ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.5, size = 4) + labs(title = "Time to adult eclosion")+ 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+
+me <- ggplot(gazella.male, aes(x = Treatment.ID, y = AT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.5, size = 4) + labs(title = "Time to adult eclosion - males only")+ 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+
+fe <- ggplot(gazella.female, aes(x = Treatment.ID, y = AT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.5, size = 4) + labs(title = "Time to adult eclosion - females only")+ 
+  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+
+mfe <- grid.arrange(me,fe, ncol = 2)
+
+grid.arrange(ae, mfe)
+
+# Survivals
+
+
+
+ggvgs.surv <- prop.test(x = c((nrow(gg) - (sum(gg$Dead. == "y"))), (nrow(gs) - (sum(gs$Dead. == "y")))), n = c(nrow(gg), nrow(gs)))
+
+ggvgs.surv
+
+ssvsg.surv <- prop.test(x = c((nrow(ss) - (sum(ss$Dead. == "y"))), (nrow(sg) - (sum(sg$Dead. == "y")))), n = c(nrow(ss), nrow(sg)))
+
+ssvsg.surv
 
 ```
