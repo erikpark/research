@@ -15,6 +15,14 @@ f2.fixed <- f2.fixed[complete.cases(f2.fixed[,1]),]
 
 f2.fixed$Maternal.size <- as.factor(f2.fixed$Maternal.size)
 
+f2.removed <- subset(f2.fixed, Dead. == "")
+
+
+
+
+
+
+
 ggpairs(data = f2.orig, columns = c(4,11))
 
 ggpairs(data = f2.orig, columns = c(7,11))
@@ -56,7 +64,12 @@ ggplot(f2.fixed, aes(x = mother, y = Time.to.adulthood, fill = Treatment.ID)) + 
 
 ggplot(f2.fixed, aes(x = mother, y = Adult.size, fill = Treatment.ID)) + geom_boxplot()
 
+ggplot(f2.fixed, aes(x = Maternal.size, y = Adult.size, fill = Treatment.ID)) + geom_boxplot()
+
 ggplot(f2.fixed, aes(x = Treatment.ID, y = Adult.size, fill = Sex)) + geom_boxplot()
+
+ggplot(f2.fixed, aes(x = Treatment.ID, y = Adult.size)) + geom_boxplot()
+
 
 fun_length <- function(x){
   return(data.frame(y=median(x),label= paste0("n=", length(x))))
@@ -64,6 +77,10 @@ fun_length <- function(x){
 
 ggplot(f2.fixed, aes(x = Treatment.ID, y = Adult.size)) + geom_boxplot() + stat_compare_means(method = "wilcox.test", comparisons = list(c("gg","gs"))) +
   stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.5, size = 4)
+
+ggplot(f2.fixed, aes(x = Sex, y = Adult.size)) + geom_boxplot() + stat_compare_means(method = "wilcox.test", comparisons = list(c("m","f"))) +
+  stat_summary(aes(x=factor(Sex)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
                vjust = +1.5, size = 4)
 
 ggplot(f2.fixed, aes(x = mother, y = Adult.size, fill = Treatment.ID)) + geom_boxplot() + facet_wrap(~Sex)
@@ -74,7 +91,8 @@ ggplot(f2.fixed, aes(x= Maternal.size, y= BB.weight)) + geom_boxplot()
 
 scatterplot(Adult.size ~ BB.weight | Maternal.size, data = f2.fixed)
 
-scatterplot(BB.weight ~ Maternal.size, data = f2.orig)
+scatterplot(Adult.size ~ Maternal.size, data = f2.orig, boxplots = FALSE, smoother = FALSE)
+
 
 ggplot(f2.fixed, aes(x = mother, y = Dead., fill = Treatment.ID)) + geom_point()
 
@@ -84,10 +102,10 @@ summary(mfull.time)
 
 Anova(mfull.time)
 
-mred.time <- lm(Time.to.adulthood ~ Treatment.ID + Maternal.size, data = f2.fixed)
+mred.time <- lm(Time.to.adulthood ~ Treatment.ID + Sex, data = f2.fixed)
 summary(mred.time)
 
-Anova(mfull.time)
+Anova(mred.time)
 
 ``````````````````````````````
 
@@ -96,8 +114,19 @@ summary(mfull.size)
 
 Anova(mfull.size)
 
+
+mfullfac.size <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight*Maternal.size, data = f2.removed)
+summary(mfullfac.size)
+
+Anova(mfullfac.size)
+
+anova(mfull.size,mfullfac.size)
+
+
 mred.size <- lm(Adult.size ~ Treatment.ID + Sex, data = f2.fixed)
 summary(mred.size)
+
+Anova(mred.size)
 
 mbb.size <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight, data = f2.fixed)
 summary(mbb.size)
@@ -114,17 +143,47 @@ summary(mmid.size)
 
 Anova(mmid.size)
 
+anova(mred.size,mmid.size)
+
+anova(mmid.size, mfull.size)
+
+anova(mmom.size, mfull.size)
+
+anova(mbb.size, mfull.size)
+
+
+
 plot(Effect(c("Treatment.ID","Sex","BB.weight"),mmid.size))
 
 plot(Effect(c("Treatment.ID","Sex","Maternal.size"),mmid.size))
 
-plot(Effect(c("Treatment.ID"),mfull.size))
+plot(Effect(c("Treatment.ID","Sex"),mfull.size))
+
 
 plot(Effect(c("Treatment.ID"),mred.size))
 
-anova(mred.size,mmid.size)
+plot(Effect(c("Sex"),mred.size))
 
-anova(mmid.size, mfull.size)
+
+plot(Effect(c("Treatment.ID"),mfull.size))
+
+plot(Effect(c("Sex"),mfull.size))
+
+plot(Effect(c("BB.weight"),mfull.size))
+
+plot(Effect(c("Maternal.size"),mfull.size))
+
+
+plot(Effect(c("Treatment.ID"),mmid.size))
+
+plot(Effect(c("Sex"),mmid.size))
+
+plot(Effect(c("BB.weight"),mmid.size))
+
+plot(Effect(c("Maternal.size"),mmid.size))
+
+
+
 
 mtest.size <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight:(Maternal.size)^2, data = f2.fixed)
 summary(mtest.size)
@@ -190,3 +249,8 @@ residualPlots(mfull.size.sqrt)
 outlierTest(mfull.size.sqrt)
 mfull.size.removed.sqrt <- update(mfull.size.sqrt, subset=-c(79,98))
 summary(mfull.size.removed.sqrt)
+residualPlots(mfull.size.removed.sqrt)
+# So removing the outlier after the square root transformation gets as close as possible to normal residuals.
+# But does it really matter?
+
+plot(Effect(c("Treatment.ID","Sex","BB.weight"),mfull.size.removed.sqrt))

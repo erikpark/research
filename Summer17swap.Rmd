@@ -16,6 +16,7 @@ library(ggpubr)
 library(gridExtra)
 library(alr4)
 library(ggsignif)
+library(ggthemes)
 
 
 
@@ -57,9 +58,22 @@ ss.survival <- (nrow(ss) - (sum(ss$Dead. == "y"))) / nrow(ss)
 
 sg.survival <- (nrow(sg) - (sum(sg$Dead. == "y"))) / nrow(sg)
 
+
+gg.alive <- (nrow(gg) - (sum(gg$Dead. == "y")))
+
+gs.alive <- (nrow(gs) - (sum(gs$Dead. == "y")))
+
+ss.alive <- (nrow(ss) - (sum(ss$Dead. == "y")))
+
+sg.alive <- (nrow(sg) - (sum(sg$Dead. == "y")))
+
 survivals <- c(gg.survival,gs.survival,ss.survival,sg.survival)
 survivals <- as.data.frame(survivals)
 survivals$treatment <- c("gg", "gs", "ss", "sg")
+survivals$species <- c("Gazella", "Gazella", "Sagittarius", "Sagittarius")
+survivals$microbiome <- c("Gazella", "Sagittarius", "Sagittarius", "Gazella")
+survivals$alive <- c(gg.alive,gs.alive,ss.alive,sg.alive)
+
 
 fun_length <- function(x){
   return(data.frame(y=median(x),label= paste0("n=", length(x))))
@@ -216,6 +230,9 @@ summary(m4s)
 
 gazella.data <- rbind(gg,gs)
 
+#removing individual with pupal time, but not weight
+gazella.data <- gazella.data[-20,]
+
 gazella.male <- gazella.data[gazella.data$Sex == "m",]
 gazella.female <- gazella.data[gazella.data$Sex == "f",]
 
@@ -226,25 +243,25 @@ fun_length <- function(x){
 # Plot for gazella pupal time
 pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
   stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
-               vjust = +1.3, size = 4) + labs(title = "Time to pupation for all individuals") + 
+               vjust = +1.3, size = 4) + labs(title = "Days to pupation for all individuals", x = "Treatment Group", y = "Days") + 
   theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
-  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+  theme(axis.title = element_text(family = "Trebuchet MS", size=14)) + theme(axis.text=element_text(size=14))
 
-mp <- ggplot(gazella.male, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
-  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
-               vjust = +1.3, size = 4) + labs(title = "Time to Pupation - males only")+ 
-  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
-  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+#mp <- ggplot(gazella.male, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+#  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+#               vjust = +1.3, size = 4) + labs(title = "Time to Pupation - males only")+ 
+#  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+#  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
 
-fp <- ggplot(gazella.female, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
-  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
-               vjust = +1.3, size = 4) + labs(title = "Time to Pupation - females only")+ 
-  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
-  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
+#fp <- ggplot(gazella.female, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+#  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text",
+#               vjust = +1.3, size = 4) + labs(title = "Time to Pupation - females only")+ 
+#  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=0)) +
+#  theme(axis.title = element_text(family = "Trebuchet MS", size=12)) + theme(axis.text=element_text(size=12))
 
-mfp <- grid.arrange(mp,fp, ncol = 2)
+#mfp <- grid.arrange(mp,fp, ncol = 2)
 
-grid.arrange(pt, mfp)
+#grid.arrange(pt, mfp)
 
 
 # Weight at pupa day 3
@@ -291,5 +308,126 @@ ggvgs.surv
 ssvsg.surv <- prop.test(x = c((nrow(ss) - (sum(ss$Dead. == "y"))), (nrow(sg) - (sum(sg$Dead. == "y")))), n = c(nrow(ss), nrow(sg)))
 
 ssvsg.surv
+
+```
+
+```{r}
+
+theme_Publication <- function(base_size=14, base_family="helvetica") {
+      library(grid)
+      library(ggthemes)
+      (theme_foundation(base_size=base_size, base_family=base_family)
+       + theme(plot.title = element_text(face = "bold",
+                                         size = rel(1.2), hjust = 0.5),
+               text = element_text(),
+               panel.background = element_rect(colour = NA),
+               plot.background = element_rect(colour = NA),
+               panel.border = element_rect(colour = NA),
+               axis.title = element_text(face = "bold",size = rel(1)),
+               axis.title.y = element_text(angle=90,vjust =2),
+               axis.title.x = element_text(vjust = -0.2),
+               axis.text = element_text(), 
+               axis.line = element_line(colour="black"),
+               axis.ticks = element_line(),
+               panel.grid.major = element_line(colour="#f0f0f0"),
+               panel.grid.minor = element_blank(),
+               legend.key = element_rect(colour = NA, size = 5),
+               legend.position = "right",
+               legend.direction = "vertical",
+               legend.key.size= unit(0.7, "cm"),
+               legend.margin = unit(0, "cm"),
+               legend.title = element_text(face="italic"),
+               plot.margin=unit(c(10,5,5,5),"mm"),
+               strip.background=element_rect(colour="#f0f0f0",fill="#f0f0f0"),
+               strip.text = element_text(face="bold")
+          ))
+      
+}
+
+scale_fill_Publication <- function(...){
+      library(scales)
+      discrete_scale("fill","Publication",manual_pal(values = c("#386cb0","#fdb462","#7fc97f","#ef3b2c","#662506","#a6cee3","#fb9a99","#984ea3","#ffff33")), ...)
+
+}
+
+scale_colour_Publication <- function(...){
+      library(scales)
+      discrete_scale("colour","Publication",manual_pal(values = c("#386cb0","#fdb462","#7fc97f","#ef3b2c","#662506","#a6cee3","#fb9a99","#984ea3","#ffff33")), ...)
+
+}
+
+```
+
+```{r}
+
+# Plot for gazella pupal time
+
+#pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 8, vjust = 2) +
+#  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+#  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(0.9), fun.data = fun_length,  geom = "text",
+#               vjust = +1.4, size = 6, hjust = -0.2) + labs(title = "Days until pupation", x = "Microbiome ID", y = "Days") + 
+#  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=18, hjust=+0.5)) +
+#  theme(axis.title = element_text(family = "Trebuchet MS", size=16)) + theme(axis.text=element_text(size=16))
+
+
+pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE) +
+  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(0.9), fun.data = fun_length,  geom = "text",
+               vjust = +1.4, hjust = -0.2) + labs(title = "Days until pupation", x = "Microbiome ID", y = "Days") + 
+  theme_Publication()
+
+# Theme publication argument seems to result in the best plots
+
+
+# Weight at pupa day 3
+
+#pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+#  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+#  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4, size = 4) + labs(title = "Weight at pupa day 3", x = "Microbiome ID", y = "Weight (g)")+ 
+#  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=+0.5)) +
+#  theme(axis.title = element_text(family = "Trebuchet MS", size=14)) + theme(axis.text=element_text(size=14))
+
+pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE) +
+  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = -.4) + labs(title = "Weight at pupa day 3", x = "Microbiome ID", y = "Weight (g)") + theme_Publication()
+
+
+
+# Time to adult eclosion
+
+#ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 6, vjust = 2) +
+#  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+#  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4, size = 4) + labs(title = "Days until adult eclosion", x = "Microbiome ID", y = "Days")+ 
+#  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=+0.5)) +
+#  theme(axis.title = element_text(family = "Trebuchet MS", size=14)) + theme(axis.text=element_text(size=14))
+
+ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE) +
+  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4) + labs(title = "Days until adult eclosion", x = "Microbiome ID", y = "Days")+ 
+  theme_Publication()
+
+
+# Final plot for growth metrics
+ggarrange(pt,pw,ae, ncol = 3, labels = c("A","B","C"))
+
+
+
+
+# Plot of survivals
+
+#making custom sig values first
+
+pv_final <- as.data.frame(c(ssvsg.surv$p.value))
+pv_final$names <- c("Sag")
+pv_final$map_signif <- ifelse(pv_final$`c(ssvsg.surv$p.value)` > 0.05, "", ifelse(pv_final$`c(ssvsg.surv$p.value)` > 0.01,"*", "**"))  
+
+
+ggplot(survivals, aes(x = species, y = survivals, fill = microbiome)) + geom_col(position = "dodge") + expand_limits(y = 0)+ 
+  theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c("Sagittarius","Sagittarius")), annotations = pv_final$map_signif, textsize = 8, vjust = 2) 
+#+ scale_fill_grey()
+
+ggplot(survivals, aes(x = species, y = survivals, fill = microbiome)) + geom_col(position = "dodge") + expand_limits(y = 0)+ 
+  theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c(survivals$treatment == "ss", survivals$treatment == "sg")), test = "prop.test") 
+
 
 ```
