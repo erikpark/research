@@ -193,34 +193,7 @@ mfp <- grid.arrange(mp,fp, ncol = 2)
 grid.arrange(f, mfp)
 
 
-swap.model <- swap.orig
 
-swap.model$dead <- ifelse(swap.model$Dead.=="y","1","0")
-swap.model$dead <- as.factor(swap.model$dead)
-
-m1 <- lm(dead ~ Treatment.ID, data = swap.model)
-summary(m1)$coef
-
-m2 <- lm(AT ~ Treatment.ID, data = swap.model)
-summary(m2)
-linearHypothesis(m2, "Treatment.IDsg=Treatment.IDss")
-# So, see that there is a significant difference between groups gg and gs in terms of adult time.
-m2sex <- update(m2, ~. + Sex)
-summary(m2sex)
-# Still seems to be significant when sex is considered.
-
-m3 <- lm(ATW ~ Treatment.ID, data = swap.model)
-summary(m3)
-linearHypothesis(m3, "Treatment.IDsg=Treatment.IDss")
-# So, no real difference between adult size for the different groups.
-
-m4 <- lm(PT ~ Treatment.ID, data = swap.model)
-summary(m4)
-linearHypothesis(m4, "Treatment.IDsg=Treatment.IDss")
-# Real difference in pupal time between the gazella treatments.
-m4s <- update(m4, ~. + Sex)
-summary(m4s)
-# Sex might be having an effect too?
 
 ```
 
@@ -423,8 +396,7 @@ pv_final$map_signif <- ifelse(pv_final$`c(ssvsg.surv$p.value)` > 0.05, "", ifels
 
 
 ggplot(survivals, aes(x = species, y = survivals, fill = microbiome)) + geom_col(position = "dodge") + expand_limits(y = 0)+ 
-  theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c("Sagittarius","Sagittarius")), annotations = pv_final$map_signif, textsize = 8, vjust = 2) 
-#+ scale_fill_grey()
+  theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c("Sagittarius","Sagittarius")), annotations = pv_final$map_signif, textsize = 8, vjust = 2) + scale_fill_grey()
 
 ggplot(survivals, aes(x = species, y = survivals, fill = microbiome)) + geom_col(position = "dodge") + expand_limits(y = 0)+ 
   theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c(survivals$treatment == "ss", survivals$treatment == "sg")), test = "prop.test") 

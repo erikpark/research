@@ -14,6 +14,7 @@ library(alr4)
 library(GGally)
 library(lmtest)
 library(visreg)
+library(plyr)
 
 f2.orig <- read.csv("Microbiome swap F2's - Sheet1.csv")
 
@@ -22,6 +23,10 @@ f2.fixed <- separate(data = f2.orig, col = Mother.Individual, into = c("mother",
 f2.fixed <- f2.fixed[-(35:40),]
 
 f2.fixed <- f2.fixed[complete.cases(f2.fixed[,1]),]
+
+f2.fixed$Sex <- revalue(f2.fixed$Sex, c("m"="Male", "f"="Female"))
+
+f2.fixed$Treatment.ID <- revalue(f2.fixed$Treatment.ID, c("gg"="Gazella", "gs"="Sagittarius"))
 
 #f2.fixed$Maternal.size <- as.factor(f2.fixed$Maternal.size)
 
@@ -83,21 +88,21 @@ summary(mfull.size)
 
 Anova(mfull.size)
 
-a <- plot(Effect(c("Treatment.ID"),mfull.size))
+#a <- plot(Effect(c("Treatment.ID"),mfull.size))
 
-b <- plot(Effect(c("Sex"),mfull.size))
+#b <- plot(Effect(c("Sex"),mfull.size))
 
-c <- plot(Effect(c("BB.weight"),mfull.size))
+#c <- plot(Effect(c("BB.weight"),mfull.size))
 
-d <- plot(Effect(c("Maternal.size"),mfull.size))
+#d <- plot(Effect(c("Maternal.size"),mfull.size))
 
-grid.arrange(a,b,c,d, ncol = 2)
+#grid.arrange(a,b,c,d, ncol = 2)
 
 s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() + 
   labs(x = "Sex", y = "")
 
 t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
-  labs(x = "Microbiome ID", y = "Adult Size") 
+  labs(x = "Microbiome ID", y = "Adult Size")
 
 bb <- visreg(mfull.size, "BB.weight", gg = TRUE) + theme_Publication()+ 
   labs(x = "Brood Ball Weight", y = "Adult Size")
@@ -105,6 +110,6 @@ bb <- visreg(mfull.size, "BB.weight", gg = TRUE) + theme_Publication()+
 ms <- visreg(mfull.size, "Maternal.size", gg = TRUE) + theme_Publication() + 
   labs(x = "Maternal Size", y = "")
 
-grid.arrange(t,s,bb,ms, ncol = 2, top = "Effect sizes of Variables on Gazella F2 Adult sizes")
+grid.arrange(t,s,bb,ms, ncol = 2, top = "Influence of Regressors on F2 Adult Body Size")
 
 ```
