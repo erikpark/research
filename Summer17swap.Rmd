@@ -73,6 +73,8 @@ survivals$treatment <- c("gg", "gs", "ss", "sg")
 survivals$species <- c("Gazella", "Gazella", "Sagittarius", "Sagittarius")
 survivals$microbiome <- c("Gazella", "Sagittarius", "Sagittarius", "Gazella")
 survivals$alive <- c(gg.alive,gs.alive,ss.alive,sg.alive)
+survivals$experiment <- c("Control", "Heterospecific microbiome","Control", "Heterospecific microbiome")
+survivals$n <- c(nrow(gg), nrow(gs), nrow(ss), nrow(sg))
 
 
 fun_length <- function(x){
@@ -202,6 +204,9 @@ grid.arrange(f, mfp)
 ```{r}
 
 gazella.data <- rbind(gg,gs)
+
+sagittarius.data <- rbind(ss,sg)
+sagittarius.data$Treatment.ID <- with(sagittarius.data, relevel(Treatment.ID, "ss"))
 
 #removing individual with pupal time, but not weight
 gazella.data <- gazella.data[-20,]
@@ -333,7 +338,7 @@ scale_colour_Publication <- function(...){
 
 ```{r}
 
-# Plot for gazella pupal time
+# Gazella plots
 
 #pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", textsize = 8, vjust = 2) +
 #  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
@@ -343,11 +348,11 @@ scale_colour_Publication <- function(...){
 #  theme(axis.title = element_text(family = "Trebuchet MS", size=16)) + theme(axis.text=element_text(size=16))
 
 
-pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE) +
-  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
+pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE, textsize = 10, vjust = +0.7)+
+  scale_x_discrete(labels = c("", "")) +
   stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(0.9), fun.data = fun_length,  geom = "text",
-               vjust = +1.4, hjust = -0.2) + labs(title = "Days until pupation", x = "Microbiome ID", y = "Days") + 
-  theme_Publication()
+               vjust = c(-0.7,+1.4), size = 5) + labs(x = "", y = "Days unitl pupation") + 
+  theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "Experimental condition", breaks=c("gg","gs"), labels=c("Control", "Heterospecific microbiome"))
 
 # Theme publication argument seems to result in the best plots
 
@@ -360,9 +365,9 @@ pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT)) + geom_boxplot() + geo
 #  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=+0.5)) +
 #  theme(axis.title = element_text(family = "Trebuchet MS", size=14)) + theme(axis.text=element_text(size=14))
 
-pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE) +
-  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
-  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = -.4) + labs(title = "Weight at pupa day 3", x = "Microbiome ID", y = "Weight (g)") + theme_Publication()
+pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE, textsize = 10, vjust = +0.7) +
+  scale_x_discrete(labels = c("", "")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = -.4, size = 5) + labs(x = "", y = "Weight (g) at pupa day 3") + theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "Experimental condition", breaks=c("gg","gs"), labels=c("Control", "Heterospecific microbiome"))
 
 
 
@@ -374,14 +379,14 @@ pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW)) + geom_boxplot() + geo
 #  theme(plot.title = element_text(family = "Trebuchet MS", face="bold", size=16, hjust=+0.5)) +
 #  theme(axis.title = element_text(family = "Trebuchet MS", size=14)) + theme(axis.text=element_text(size=14))
 
-ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE) +
-  scale_x_discrete(labels = c("Gazella", "Sagittarius")) +
-  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4) + labs(title = "Days until adult eclosion", x = "Microbiome ID", y = "Days")+ 
-  theme_Publication()
+ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = TRUE, , textsize = 10, vjust = +0.7) +
+  scale_x_discrete(labels = c("", "")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4, size = 5) + labs(x = "", y = "Days until adult eclosion")+ 
+  theme_Publication() + scale_fill_grey(start=1, end = 0.8,  name = "Experimental condition", breaks=c("gg","gs"), labels=c("Control", "Heterospecific microbiome"))
 
 
 # Final plot for growth metrics
-ggarrange(pt,pw,ae, ncol = 3, labels = c("A","B","C"))
+ggarrange(pt,pw,ae, ncol = 3, labels = c("A","B","C"), common.legend = TRUE, font.label = list(size = 16, face = "italic", align = "h"))
 
 
 
@@ -395,11 +400,37 @@ pv_final$names <- c("Sag")
 pv_final$map_signif <- ifelse(pv_final$`c(ssvsg.surv$p.value)` > 0.05, "", ifelse(pv_final$`c(ssvsg.surv$p.value)` > 0.01,"*", "**"))  
 
 
-ggplot(survivals, aes(x = species, y = survivals, fill = microbiome)) + geom_col(position = "dodge") + expand_limits(y = 0)+ 
-  theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c("Sagittarius","Sagittarius")), annotations = pv_final$map_signif, textsize = 8, vjust = 2) + scale_fill_grey()
+ggplot(survivals, aes(x = species, y = survivals, fill = experiment)) + geom_col(position = "dodge", color = "black") + expand_limits(y = 0)+ 
+  theme_Publication() + labs(x = "Host Species", y = "Survival Rate") + geom_signif(comparisons = list(c("Sagittarius","Sagittarius")), annotations = pv_final$map_signif, textsize = 8, vjust = 2) + scale_fill_grey(start=1, end = 0.8,  name = "Experimental condition") + geom_text(aes(label = n), position = position_dodge(width = 0.9), vjust = -.5, size = 5)
 
-ggplot(survivals, aes(x = species, y = survivals, fill = microbiome)) + geom_col(position = "dodge") + expand_limits(y = 0)+ 
-  theme_Publication() + labs(x = "Focal Host Species", y = "Survival Rate", title = "Rates of Survival to Adulthood") + geom_signif(comparisons = list(c(survivals$treatment == "ss", survivals$treatment == "sg")), test = "prop.test") 
+
+```
+
+```{r}
+# Sagittarius plots
+
+
+pt <- ggplot(sagittarius.data, aes(x = Treatment.ID, y = PT, fill = Treatment.ID)) + geom_boxplot() +
+  scale_x_discrete(labels = c("", "")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(0.9), fun.data = fun_length,  geom = "text",
+               vjust = c(-0.7,+1.4), size = 5) + labs(x = "", y = "Days unitl pupation") + 
+  theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "Experimental condition", breaks=c("ss","sg"), labels=c("Control", "Heterospecific microbiome"))
+
+
+pw <- ggplot(sagittarius.data, aes(x = Treatment.ID, y = PW, fill = Treatment.ID)) + geom_boxplot() +
+  scale_x_discrete(labels = c("", "")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = c(+1.2,-0.7), size = 5) + labs(x = "", y = "Weight (g) at pupa day 3") + theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "Experimental condition", breaks=c("ss","sg"), labels=c("Control", "Heterospecific microbiome"))
+
+
+ae <- ggplot(sagittarius.data, aes(x = Treatment.ID, y = AT, fill = Treatment.ID)) + geom_boxplot() +
+  scale_x_discrete(labels = c("", "")) +
+  stat_summary(aes(x=factor(Treatment.ID)), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4, size = 5) + labs(x = "", y = "Days until adult eclosion")+ 
+  theme_Publication() + scale_fill_grey(start=1, end = 0.8,  name = "Experimental condition", breaks=c("ss","sg"), labels=c("Control", "Heterospecific microbiome"))
+
+
+# Final plot for growth metrics
+ggarrange(pt,pw,ae, ncol = 3, labels = c("A","B","C"), common.legend = TRUE, font.label = list(size = 16, face = "italic", align = "h"))
+
 
 
 ```

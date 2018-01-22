@@ -26,9 +26,11 @@ f2.fixed <- f2.fixed[complete.cases(f2.fixed[,1]),]
 
 f2.fixed$Sex <- revalue(f2.fixed$Sex, c("m"="Male", "f"="Female"))
 
-f2.fixed$Treatment.ID <- revalue(f2.fixed$Treatment.ID, c("gg"="Gazella", "gs"="Sagittarius"))
+f2.fixed$Treatment.ID <- revalue(f2.fixed$Treatment.ID, c("gg"="Control", "gs"="Heterospecific microbiome"))
 
 #f2.fixed$Maternal.size <- as.factor(f2.fixed$Maternal.size)
+
+f2.alive <- subset(f2.fixed, Dead. == "")
 
 mfull.size <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight*Maternal.size, data = f2.fixed)
 
@@ -99,17 +101,18 @@ Anova(mfull.size)
 #grid.arrange(a,b,c,d, ncol = 2)
 
 s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() + 
-  labs(x = "Sex", y = "")
+  labs(x = "Sex", y = "Adult Size") + ylim(5,7.2) + 
+  stat_summary(aes(x=factor(model == "Sex")), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4, size = 5)
 
 t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
-  labs(x = "Microbiome ID", y = "Adult Size")
+  labs(x = "Experimental condition", y = "") + ylim(5,7.2)
 
-bb <- visreg(mfull.size, "BB.weight", gg = TRUE) + theme_Publication()+ 
-  labs(x = "Brood Ball Weight", y = "Adult Size")
+bb <- visreg(mfull.size, "BB.weight", gg = TRUE, cond = list(Maternal.size = 5.5)) + theme_Publication()+ 
+  labs(x = "Brood Ball Weight", y = "Adult Size") + ylim(5,7.2)
 
-ms <- visreg(mfull.size, "Maternal.size", gg = TRUE) + theme_Publication() + 
-  labs(x = "Maternal Size", y = "")
+ms <- visreg(mfull.size, "Maternal.size", gg = TRUE, cond = list(BB.weight = 4.2)) + theme_Publication() + 
+  labs(x = "Maternal Size", y = "") + ylim(5,7.2)
 
-grid.arrange(t,s,bb,ms, ncol = 2, top = "Influence of Regressors on F2 Adult Body Size")
+grid.arrange(bb,ms,s,t, ncol = 2)
 
 ```
