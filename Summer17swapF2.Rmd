@@ -11,8 +11,6 @@ library(ggpubr)
 library(gridExtra)
 library(tidyr)
 library(alr4)
-library(GGally)
-library(lmtest)
 library(visreg)
 library(plyr)
 
@@ -26,7 +24,7 @@ f2.fixed <- f2.fixed[complete.cases(f2.fixed[,1]),]
 
 f2.fixed$Sex <- revalue(f2.fixed$Sex, c("m"="Male", "f"="Female"))
 
-f2.fixed$Treatment.ID <- revalue(f2.fixed$Treatment.ID, c("gg"="Control", "gs"="Heterospecific microbiome"))
+f2.fixed$Treatment.ID <- revalue(f2.fixed$Treatment.ID, c("gg"="Selfinoculated", "gs"="Crossinoculated"))
 
 #f2.fixed$Maternal.size <- as.factor(f2.fixed$Maternal.size)
 
@@ -90,22 +88,11 @@ summary(mfull.size)
 
 Anova(mfull.size)
 
-#a <- plot(Effect(c("Treatment.ID"),mfull.size))
-
-#b <- plot(Effect(c("Sex"),mfull.size))
-
-#c <- plot(Effect(c("BB.weight"),mfull.size))
-
-#d <- plot(Effect(c("Maternal.size"),mfull.size))
-
-#grid.arrange(a,b,c,d, ncol = 2)
-
 s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() + 
-  labs(x = "Sex", y = "Adult Size") + ylim(5,7.2) + 
-  stat_summary(aes(x=factor(model == "Sex")), position=position_dodge(.9), fun.data = fun_length,  geom = "text", vjust = +1.4, size = 5)
+  labs(x = "Sex", y = "Adult Size") + ylim(5,7.2)
 
 t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
-  labs(x = "Experimental condition", y = "") + ylim(5,7.2)
+  labs(x = "Microbiome origin", y = "") + ylim(5,7.2)
 
 bb <- visreg(mfull.size, "BB.weight", gg = TRUE, cond = list(Maternal.size = 5.5)) + theme_Publication()+ 
   labs(x = "Brood Ball Weight", y = "Adult Size") + ylim(5,7.2)
