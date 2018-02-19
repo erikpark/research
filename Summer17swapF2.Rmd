@@ -91,14 +91,26 @@ Anova(mfull.size)
 s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() + 
   labs(x = "Sex", y = "Adult Size") + ylim(5,7.2)
 
+s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() + 
+  labs(x = "", y = "") + ylim(5,7.2)
+
 t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
   labs(x = "Microbiome origin", y = "") + ylim(5,7.2)
+
+t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
+  labs(x = "", y = "") + ylim(5,7.2)
 
 bb <- visreg(mfull.size, "BB.weight", gg = TRUE, cond = list(Maternal.size = 5.5)) + theme_Publication()+ 
   labs(x = "Brood Ball Weight", y = "Adult Size") + ylim(5,7.2)
 
+bb <- visreg(mfull.size, "BB.weight", gg = TRUE, cond = list(Maternal.size = 5.5)) + theme_Publication()+ 
+  labs(x = "", y = "") + ylim(5,7.2)
+
 ms <- visreg(mfull.size, "Maternal.size", gg = TRUE, cond = list(BB.weight = 4.2)) + theme_Publication() + 
   labs(x = "Maternal Size", y = "") + ylim(5,7.2)
+
+ms <- visreg(mfull.size, "Maternal.size", gg = TRUE, cond = list(BB.weight = 4.2)) + theme_Publication() + 
+  labs(x = "", y = "") + ylim(5,7.2)
 
 grid.arrange(bb,ms,s,t, ncol = 2)
 
