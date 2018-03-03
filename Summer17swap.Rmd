@@ -102,6 +102,11 @@ ggvgs.surv <- prop.test(x = c((nrow(gg) - (sum(gg$Dead. == "y"))), (nrow(gs) - (
 
 ssvsg.surv <- prop.test(x = c((nrow(ss) - (sum(ss$Dead. == "y"))), (nrow(sg) - (sum(sg$Dead. == "y")))), n = c(nrow(ss), nrow(sg)))
 
+ggvss.surv <- prop.test(x = c((nrow(gg) - (sum(gg$Dead. == "y"))), (nrow(ss) - (sum(ss$Dead. == "y")))), n = c(nrow(gg), nrow(ss)))
+
+gsvsg.surv <- prop.test(x = c((nrow(gs) - (sum(gs$Dead. == "y"))), (nrow(sg) - (sum(sg$Dead. == "y")))), n = c(nrow(gs), nrow(sg)))
+
+
 ```
 
 ```{r}
@@ -207,6 +212,13 @@ ggplot(survivals, aes(x = species, y = survivals, fill = experiment)) + geom_col
 
 ggplot(survivals, aes(x = species, y = survivals, fill = experiment)) + geom_col(position = position_dodge(width = .9), color = "black", width = 0.8) + expand_limits(y = 0)+ 
   theme_Publication() + labs(x = "", y = "") + geom_signif(comparisons = list(c("","")), annotations = pv_final$map_signif, textsize = 8, vjust = 2) + scale_fill_grey(start=1, end = 0.8,  name = "", labels = c("","")) + theme(legend.justification = c(1, 1), legend.position = c(1, 1))
+
+
+# Treatment comparisons instead of species ones
+
+ggplot(survivals, aes(x = experiment, y = survivals, fill = species)) + geom_col(position = position_dodge(width = .9), color = "black", width = 0.8) + expand_limits(y = 0)+ 
+  theme_Publication() + labs(x = "Microbiome origin", y = "Survival Rate") + scale_fill_grey(start=1, end = 0.8,  name = "Host species") + theme(legend.justification = c(1, 1), legend.position = c(1, 1))
+
 
 
 ```

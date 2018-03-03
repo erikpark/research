@@ -8,16 +8,16 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="39.6875cm"
-   height="18.520834cm"
-   viewBox="0 0 1125 525"
+   width="41.810814cm"
+   height="20.520834cm"
+   viewBox="0 0 1185.1884 581.69291"
    version="1.1"
    id="svg4841"
    sodipodi:docname="fig1.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   inkscape:export-filename="/Users/Moczeklab/Desktop/test2.png"
-   inkscape:export-xdpi="20.607969"
-   inkscape:export-ydpi="20.607969">
+   inkscape:version="0.92.2 (unknown)"
+   inkscape:export-filename="/media/removable/USB Drive/Research/fig1.png"
+   inkscape:export-xdpi="95.809998"
+   inkscape:export-ydpi="95.809998">
   <metadata
      id="metadata4845">
     <rdf:RDF>
@@ -39,27 +39,33 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="975"
+     inkscape:window-width="1600"
+     inkscape:window-height="1000"
      id="namedview4843"
      showgrid="true"
      inkscape:snap-grids="false"
      showguides="false"
      inkscape:zoom="0.78"
-     inkscape:cx="1161.8458"
-     inkscape:cy="295.20548"
-     inkscape:window-x="1280"
-     inkscape:window-y="23"
+     inkscape:cx="1208.9293"
+     inkscape:cy="337.62829"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4841"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
      units="cm"
-     inkscape:document-units="px">
+     inkscape:document-units="px"
+     fit-margin-top="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1"
+     fit-margin-left="1">
     <inkscape:grid
        type="xygrid"
        id="grid6871"
-       dotted="true" />
+       dotted="true"
+       originx="35.312591"
+       originy="31.817103" />
   </sodipodi:namedview>
   <defs
      id="defs4432">
@@ -469,7 +475,7 @@
   </defs>
   <g
      id="surface437"
-     transform="translate(-3.4706634,3.4706654)">
+     transform="translate(31.841928,28.346457)">
     <rect
        x="0"
        y="0"
@@ -1512,7 +1518,7 @@
            height="596.44971"
            x="998.63013"
            y="37.796875" /></flowRegion><flowPara
-         id="flowPara7090"></flowPara></flowRoot>    <flowRoot
+         id="flowPara7090" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot7108"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1529,7 +1535,7 @@
      xml:space="preserve"
      id="flowRoot6873"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     transform="scale(0.75)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,35.312591,24.875791)"><flowRegion
        id="flowRegion6875"
        style="text-align:center;text-anchor:middle"><rect
          id="rect6877"
@@ -1543,7 +1549,7 @@
      xml:space="preserve"
      id="flowRoot6895"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0.75,0,0,0.75,-11.538462,0)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,23.774129,24.875791)"><flowRegion
        id="flowRegion6897"
        style="text-align:center;text-anchor:middle"><rect
          id="rect6899"
@@ -1557,7 +1563,7 @@
      xml:space="preserve"
      id="flowRoot6933"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     transform="scale(0.75)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,35.312591,24.875791)"><flowRegion
        id="flowRegion6935"
        style="text-align:center;text-anchor:middle"><rect
          id="rect6937"
@@ -1571,7 +1577,7 @@
      xml:space="preserve"
      id="flowRoot6941"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0.75,0,0,0.75,-11.538462,0)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,23.774129,24.875791)"><flowRegion
        id="flowRegion6943"
        style="text-align:center;text-anchor:middle"><rect
          id="rect6945"
@@ -1585,7 +1591,7 @@
      xml:space="preserve"
      id="flowRoot6951"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0.75,0,0,0.75,2.8846154,0)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,38.197207,24.875791)"><flowRegion
        id="flowRegion6953"
        style="text-align:center;text-anchor:middle"><rect
          id="rect6955"
@@ -1599,7 +1605,7 @@
      xml:space="preserve"
      id="flowRoot6969"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0.75,0,0,0.75,-8.6538462,0)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,26.658745,24.875791)"><flowRegion
        id="flowRegion6971"
        style="text-align:center;text-anchor:middle"><rect
          id="rect6973"
@@ -1613,7 +1619,7 @@
      xml:space="preserve"
      id="flowRoot7092"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0,-0.75,0.75,0,274.32865,832.43063)"><flowRegion
+     transform="matrix(0,-0.75,0.75,0,309.64124,857.30642)"><flowRegion
        id="flowRegion7094"><rect
          id="rect7096"
          width="597.32062"
@@ -1625,7 +1631,7 @@
      xml:space="preserve"
      id="flowRoot7100"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0,-0.75,0.75,0,299.79496,832.85665)"><flowRegion
+     transform="matrix(0,-0.75,0.75,0,335.10755,857.73244)"><flowRegion
        id="flowRegion7102"><rect
          id="rect7104"
          width="596.30731"
