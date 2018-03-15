@@ -77,6 +77,9 @@ survivals$alive <- c(gg.alive,gs.alive,ss.alive,sg.alive)
 survivals$experiment <- c("Control", "Heterospecific microbiome","Control", "Heterospecific microbiome")
 survivals$n <- c(nrow(gg), nrow(gs), nrow(ss), nrow(sg))
 
+Anova(lm(ATW ~ Sex + Treatment.ID, data = swap))
+summary(lm(ATW ~ Treatment.ID, data = swap))
+# Sex not significant in F1, treatment is highly significant, and explains ~73% of the variation in adult size alone.
 
 ```
 

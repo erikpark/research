@@ -14,6 +14,8 @@ library(alr4)
 library(visreg)
 library(plyr)
 
+
+# Below is depreciated, new data and model in lower chunk.
 f2.orig <- read.csv("Microbiome swap F2's - Sheet1.csv")
 
 f2.fixed <- separate(data = f2.orig, col = Mother.Individual, into = c("mother", "individual"), sep = "\\.")
@@ -26,11 +28,104 @@ f2.fixed$Sex <- revalue(f2.fixed$Sex, c("m"="Male", "f"="Female"))
 
 f2.fixed$Treatment.ID <- revalue(f2.fixed$Treatment.ID, c("gg"="Selfinoculated", "gs"="Crossinoculated"))
 
+f2.outliers <- f2.fixed[-c(4, 91),]
+
 #f2.fixed$Maternal.size <- as.factor(f2.fixed$Maternal.size)
 
 f2.alive <- subset(f2.fixed, Dead. == "")
 
+f2.alive.out <- subset(f2.outliers, Dead. == "")
+
+f2.dead <- subset(f2.fixed, Dead. == "y")
+
+
+ggplot(f2.fixed, aes(x = Adult.size, y = BB.weight, color = Treatment.ID)) + geom_point()
+ggplot(f2.outliers, aes(x = Adult.size, y = BB.weight, color = Treatment.ID)) + geom_point()
+# Plots showing the justfication for removing entries 4 and 98 from the original data.
+
 mfull.size <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight*Maternal.size, data = f2.fixed)
+mfull.size.outliers <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight*Maternal.size, data = f2.outliers)
+mfull.size2.outliers <- lm(Adult.size ~ Treatment.ID + Sex + BB.weight + Maternal.size, data = f2.outliers)
+
+plot(cooks.distance(mfull.size), pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
+abline(h = 4*mean(cooks.distance(mfull.size), na.rm=T), col="red")  # add cutoff line
+text(x=1:length(cooks.distance(mfull.size))+1, y=cooks.distance(mfull.size), labels=ifelse(cooks.distance(mfull.size)>4*mean(cooks.distance(mfull.size), na.rm=T),names(cooks.distance(mfull.size)),""), col="red")  # add labels
+# So, this plot provides good justification for the removal of the two outlying values.
+
+
+mtest.size <- lm(Adult.size ~ Treatment.ID*BB.weight + Sex, data = f2.fixed)
+mtest.size.outliers <- lm(Adult.size ~ Treatment.ID*BB.weight + Sex, data = f2.outliers)
+
+mout.size <- lm(Adult.size ~ Treatment.ID + Sex, data = f2.outliers)
+
+Anova(mfull.size.outliers)
+anova(mout.size,mfull.size.outliers)
+anova(mout.size,mtest.size.outliers)
+anova(mout.size,mfull.size2.outliers)
+# So, when outliers are removed - the best model only has the main effects of Treatment.ID and Sex.
+
+ggplot(f2.fixed, aes(x = Sex, y = Adult.size, fill = Treatment.ID)) + geom_boxplot()
+
+ggplot(f2.fixed, aes(x = Sex, y = Adult.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("Female","Male")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) + theme_Publication()
+
+ggplot(f2.outliers, aes(x = Sex, y = Adult.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("Female","Male")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) + theme_Publication()
+
+ggplot(f2.outliers, aes(x = Sex, y = BB.weight)) + geom_boxplot() + geom_signif(comparisons = list(c("Female","Male")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) + theme_Publication()
+
+ggplot(f2.outliers, aes(x = Dead., y = BB.weight)) + geom_boxplot() + geom_signif(comparisons = list(c("y","")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) + theme_Publication()
+
+ggplot(f2.outliers, aes(x = Treatment.ID, y = BB.weight)) + geom_boxplot() + geom_signif(comparisons = list(c("Selfinoculated","Crossinoculated")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) + theme_Publication()
+
+
+```
+
+```{r}
+
+
+f2 <- read.table("f2validation.csv", sep = ",", header = TRUE)
+
+f2.validate <- f2[complete.cases(f2[,8]),]
+
+ggplot(f2.validate, aes(x = Sex, y = Scope.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("m","f")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
+
+ggplot(f2.validate, aes(x = Sex, y = Adult.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("m","f")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
+
+ggplot(f2.validate, aes(x = BB.weight, y = Scope.size, color = Sex)) + geom_point()
+
+m1 <- lm(Scope.size ~ Sex*Treatment.ID*BB.weight*Maternal.size, data = f2)
+
+Anova(m1)
+
+m2 <- lm(Scope.size ~ Sex*Treatment.ID*BB.weight, data = f2)
+
+Anova(m2)
+
+m3 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Treatment.ID:BB.weight + Sex:Treatment.ID, data = f2.validate)
+
+Anova(m3)
+
+plot(cooks.distance(m3), pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
+abline(h = 4*mean(cooks.distance(m3), na.rm=T), col="red")  # add cutoff line
+text(x=1:length(cooks.distance(m3))+1, 
+     y=cooks.distance(m3), labels=ifelse(cooks.distance(m3)>4*mean(cooks.distance(m3), na.rm=T),
+                                         names(cooks.distance(m3)),""), col="red")  # add labels
+# So, should take out observation 98 probably. and based on above dot plot, also want to take out observation 4, the large outlier.
+
+f2.outliers <- f2.validate[-c(4,74),]
+
+m4 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Treatment.ID:BB.weight + Sex:Treatment.ID, data = f2.outliers)
+
+Anova(m4)
+
+m5 <- lm(Scope.size ~ Sex*Treatment.ID, data = f2.outliers)
+
+Anova(m5)
+
+m6 <- lm(Scope.size ~ Sex + Treatment.ID, data = f2.outliers)
+anova(m5,m4)
+anova(m6,m4)
+anova(m6,m5)
+# So, model 6 with just main effects of sex and treatment ID is the best.
 
 ```
 
@@ -84,6 +179,7 @@ scale_colour_Publication <- function(...){
 
 ```{r}
 
+# Depreciated, below chunk plots visreg plots using new model 6 with new data.
 summary(mfull.size)
 
 Anova(mfull.size)
@@ -94,11 +190,23 @@ s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() +
 s <- visreg(mfull.size, "Sex", gg = TRUE) + theme_Publication() + 
   labs(x = "", y = "") + ylim(5,7.2)
 
+s2 <- visreg(mout.size, "Sex", gg = TRUE) + theme_Publication() + 
+  labs(x = "Sex", y = "Adult Size") + ylim(5.3,7.2)
+
+s2 <- visreg(mout.size, "Sex", gg = TRUE) + theme_Publication() + 
+  labs(x = "", y = "") + ylim(5.3,7.2)
+
 t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
   labs(x = "Microbiome origin", y = "") + ylim(5,7.2)
 
 t <- visreg(mfull.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
   labs(x = "", y = "") + ylim(5,7.2)
+
+t2 <- visreg(mout.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
+  labs(x = "Microbiome origin", y = "") + ylim(5.3,7.2)
+
+t2 <- visreg(mout.size, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
+  labs(x = "", y = "") + ylim(5.3,7.2)
 
 bb <- visreg(mfull.size, "BB.weight", gg = TRUE, cond = list(Maternal.size = 5.5)) + theme_Publication()+ 
   labs(x = "Brood Ball Weight", y = "Adult Size") + ylim(5,7.2)
@@ -113,5 +221,24 @@ ms <- visreg(mfull.size, "Maternal.size", gg = TRUE, cond = list(BB.weight = 4.2
   labs(x = "", y = "") + ylim(5,7.2)
 
 grid.arrange(bb,ms,s,t, ncol = 2)
+grid.arrange(s2,t2, ncol = 2)
+
+```
+
+```{r}
+
+sex <- visreg(m6, "Sex", gg = TRUE) + theme_Publication() + 
+  labs(x = "Sex", y = "Scope Size") + ylim(5.9,7.6)
+
+sex <- visreg(m6, "Sex", gg = TRUE) + theme_Publication() + 
+  labs(x = "", y = "") + ylim(5.9,7.6)
+
+treat <- visreg(m6, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
+  labs(x = "Microbiome origin", y = "") + ylim(5.9,7.6)
+
+treat <- visreg(m6, "Treatment.ID", gg = TRUE) + theme_Publication()+ 
+  labs(x = "", y = "") + ylim(5.9,7.6)
+
+grid.arrange(sex,treat, ncol = 2)
 
 ```
