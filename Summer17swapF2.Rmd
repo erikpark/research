@@ -7,12 +7,6 @@ output: pdf_document
 
 ```{r, echo = FALSE}
 
-library(ggpubr)
-library(gridExtra)
-library(tidyr)
-library(alr4)
-library(visreg)
-library(plyr)
 
 
 # Below is depreciated, new data and model in lower chunk.
@@ -80,7 +74,13 @@ ggplot(f2.outliers, aes(x = Treatment.ID, y = BB.weight)) + geom_boxplot() + geo
 ```
 
 ```{r}
-
+library(ggpubr)
+library(gridExtra)
+library(tidyr)
+library(alr4)
+library(visreg)
+library(plyr)
+library(relaimpo)
 
 f2 <- read.table("f2validation.csv", sep = ",", header = TRUE)
 
@@ -126,6 +126,8 @@ anova(m5,m4)
 anova(m6,m4)
 anova(m6,m5)
 # So, model 6 with just main effects of sex and treatment ID is the best.
+
+calc.relimp(m6, type = "lmg")
 
 ```
 
