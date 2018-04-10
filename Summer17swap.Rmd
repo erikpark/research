@@ -83,7 +83,18 @@ summary(lm(ATW ~ Treatment.ID, data = swap))
 
 ```
 
+```{r}
+# Chisq test for independence
 
+table <- xtabs(alive ~ microbiome + species, survivals)
+table
+
+summary(table)
+# So microbiome and species are not independent when we consider survivals
+
+mosaicplot(table, color = TRUE, main = NULL, las = 1)
+
+```
 
 ```{r}
 
