@@ -81,6 +81,7 @@ library(alr4)
 library(visreg)
 library(plyr)
 library(relaimpo)
+library(ggsignif)
 
 f2 <- read.table("f2validation.csv", sep = ",", header = TRUE)
 
@@ -89,6 +90,9 @@ f2.validate <- f2[complete.cases(f2[,8]),]
 ggplot(f2.validate, aes(x = Sex, y = Scope.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("m","f")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
 
 ggplot(f2.validate, aes(x = Sex, y = Adult.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("m","f")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
+
+ggplot(f2.validate, aes(x = Treatment.ID, y = Adult.size, fill = Sex)) + geom_boxplot()
+# Larger males seen in gg and gs treatments
 
 ggplot(f2.validate, aes(x = BB.weight, y = Scope.size, color = Sex)) + geom_point()
 
