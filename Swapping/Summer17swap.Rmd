@@ -109,6 +109,10 @@ gazella.data <- gazella.data[-20,]
 gazella.male <- gazella.data[gazella.data$Sex == "m",]
 gazella.female <- gazella.data[gazella.data$Sex == "f",]
 
+gg <- gazella.data[gazella.data$Treatment.ID == "gg",]
+
+gs <- gazella.data[gazella.data$Treatment.ID == "gs",]
+
 
 # Survivals
 
@@ -182,7 +186,7 @@ pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT, fill = Treatment.ID)) +
   scale_x_discrete(labels = c("Selfinoculated", "Crossioculated")) + labs(x = "", y = "Days unitl pupation") + 
   theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "", breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated")) + stat_n_text(size = 5)
 
-pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)+
+pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "t.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)+
   scale_x_discrete(labels = c("", "")) + labs(x = "", y = "") + 
   theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "", breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated")) + stat_n_text(size = 5)
 
@@ -191,7 +195,7 @@ pt <- ggplot(gazella.data, aes(x = Treatment.ID, y = PT, fill = Treatment.ID)) +
 pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) +
   scale_x_discrete(labels = c("Selfinoculated", "Crossioculated")) + labs(x = "", y = "Weight (g) at pupa day 3") + theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "", breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated")) + stat_n_text(size = 5)
 
-pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) +
+pw <- ggplot(gazella.data, aes(x = Treatment.ID, y = PW, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "t.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1) +
   scale_x_discrete(labels = c("", "")) + labs(x = "", y = "") + theme_Publication() + scale_fill_grey(start=1, end = 0.8, name = "", breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated")) + stat_n_text(size = 5)
 
 
@@ -201,13 +205,13 @@ ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT, fill = Treatment.ID)) +
   scale_x_discrete(labels = c("Selfinoculated", "Crossioculated")) + labs(x = "", y = "Days until adult eclosion")+ 
   theme_Publication() + scale_fill_grey(start=1, end = 0.8,  name = "", breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated")) + stat_n_text(size = 5)
 
-ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = FALSE, , textsize = 7, vjust = +0.1) +
+ae <- ggplot(gazella.data, aes(x = Treatment.ID, y = AT, fill = Treatment.ID)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "t.test", map_signif_level = FALSE, , textsize = 7, vjust = +0.1) +
   scale_x_discrete(labels = c("", "")) + labs(x = "", y = "")+ 
   theme_Publication() + scale_fill_grey(start=1, end = 0.8,  name = "", breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated")) + stat_n_text(size = 5)
 
 
 # Final plot for growth metrics
-ggarrange(pt,ae,pw, ncol = 3, labels = c("A","B","C"), common.legend = TRUE, legend = "none", font.label = list(size = 16, face = "italic", align = "h"))
+ggarrange(pw,pt,ae, ncol = 3, labels = c("A","B","C"), common.legend = TRUE, legend = "none", font.label = list(size = 16, face = "italic", align = "h"))
 
 
 

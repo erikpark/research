@@ -82,19 +82,28 @@ library(visreg)
 library(plyr)
 library(relaimpo)
 library(ggsignif)
+library(lme4)
+library(faraway)
+library(RLRsim)
+library(ggfortify)
 
 f2 <- read.table("f2validation.csv", sep = ",", header = TRUE)
 
 f2.validate <- f2[complete.cases(f2[,8]),]
 
+f2.validate <- separate(data = f2.validate, col = Mother.Individual, into = c("mother", "individual"), sep = "\\.")
+
 ggplot(f2.validate, aes(x = Sex, y = Scope.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("m","f")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
 
 ggplot(f2.validate, aes(x = Sex, y = Adult.size)) + geom_boxplot()+ geom_signif(comparisons = list(c("m","f")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
+
+ggplot(f2.validate, aes(x = Maternal.size, y = Scope.size, fill = Treatment.ID)) + geom_boxplot() + labs(y = "Offspring size", x = "Maternal size") + scale_fill_discrete(breaks=c("gg","gs"), labels=c("Selfinoculated", "Crossinoculated"))
 
 ggplot(f2.validate, aes(x = Treatment.ID, y = Adult.size, fill = Sex)) + geom_boxplot()
 # Larger males seen in gg and gs treatments
 
 ggplot(f2.validate, aes(x = BB.weight, y = Scope.size, color = Sex)) + geom_point()
+# will probably need to remove some influential / outlying points
 
 m1 <- lm(Scope.size ~ Sex*Treatment.ID*BB.weight*Maternal.size, data = f2)
 
@@ -108,14 +117,44 @@ m3 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Treatment.ID:BB.weight + 
 
 Anova(m3)
 
+m9 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Treatment.ID:BB.weight, data = f2.validate)
+
+Anova(m9)
+
+anova(m9,m3)
+anova(m3,m2)
+anova(m3,m1)
+anova(m12,m3)
+
 plot(cooks.distance(m3), pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
 abline(h = 4*mean(cooks.distance(m3), na.rm=T), col="red")  # add cutoff line
 text(x=1:length(cooks.distance(m3))+1, 
      y=cooks.distance(m3), labels=ifelse(cooks.distance(m3)>4*mean(cooks.distance(m3), na.rm=T),
                                          names(cooks.distance(m3)),""), col="red")  # add labels
-# So, should take out observation 98 probably. and based on above dot plot, also want to take out observation 4, the large outlier.
+# So, should take out observations 98, probably 79 too, and maybe 89. and based on above dot plot, also want to take out observation 4, the large outlier.
 
 f2.outliers <- f2.validate[-c(4,74),]
+
+f2.outliers <- f2.validate[-c(60,74),]
+
+f2.outliers <- f2.validate[-c(67,74),]
+# Leads to interactions being REALLY significant, m4 best. But, maybe 79 is still too influential here
+
+f2.outliers <- f2.validate[-c(60,67,74),]
+# Takes out all the points indicated as highly influential, but leaves point 4 alone. Interactions really significant.
+
+f2.outliers <- f2.validate[-c(4,60,67,74),]
+
+f2.outliers <- f2.validate[-74,]
+
+f2.outliers <- f2.validate[-c(4,74,60),]
+# Takes out the points most clearly outlying from the plot, also corresponds to two most influential points from cooks distance. Leads to the interaction no longer being significant, but seems compelling as it doesn't take out point 67, which really doesn't seem to be all that different from the rest of the distribution.
+
+
+mtest <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Maternal.size + BB.weight:Maternal.size, data = f2.outliers)
+
+Anova(mtest)
+
 
 m4 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Treatment.ID:BB.weight + Sex:Treatment.ID, data = f2.outliers)
 
@@ -126,14 +165,106 @@ m5 <- lm(Scope.size ~ Sex*Treatment.ID, data = f2.outliers)
 Anova(m5)
 
 m6 <- lm(Scope.size ~ Sex + Treatment.ID, data = f2.outliers)
+
+m7 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + Maternal.size +  BB.weight:Maternal.size, data = f2.outliers)
+
+Anova(m7)
+
+m8 <- lm(Scope.size ~ Sex + Treatment.ID + Sex:Treatment.ID, data = f2.outliers)
+
+Anova(m8)
+
+m10 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight + BB.weight:Treatment.ID, data = f2.outliers)
+
+Anova(m10)
+
+m11 <- lm(Scope.size ~ Sex + Treatment.ID + BB.weight, data = f2.outliers)
+
+Anova(m11)
+
+m12 <- lm(Scope.size ~ Sex + Maternal.size + Treatment.ID + BB.weight, data = f2.outliers)
+
+Anova(m12)
+
 anova(m5,m4)
 anova(m6,m4)
 anova(m6,m5)
+anova(m6,m7)
+anova(m6,m10)
+anova(m10,m4)
+anova(m11,m4)
+anova(m12,m4)
 # So, model 6 with just main effects of sex and treatment ID is the best.
+
+plot(cooks.distance(m6), pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
+abline(h = 4*mean(cooks.distance(m6), na.rm=T), col="red")  # add cutoff line
+text(x=1:length(cooks.distance(m6))+1, 
+     y=cooks.distance(m6), labels=ifelse(cooks.distance(m6)>4*mean(cooks.distance(m6), na.rm=T),
+                                         names(cooks.distance(m6)),""), col="red") 
+
+plot(cooks.distance(m4), pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
+abline(h = 4*mean(cooks.distance(m4), na.rm=T), col="red")  # add cutoff line
+text(x=1:length(cooks.distance(m4))+1, 
+     y=cooks.distance(m4), labels=ifelse(cooks.distance(m4)>4*mean(cooks.distance(m4), na.rm=T),
+                                         names(cooks.distance(m4)),""), col="red") 
+
+sumary(m6)
+sumary(m4)
 
 calc.relimp(m6, type = "lmg")
 
+calc.relimp(m4, type = "lmg")
+
+autoplot(m6)
+
+autoplot(m4)
+
+
+
+
+# Per suggestion, setting mother as a random, nested effect, in a mixed model.
+m.rand1 <- lmer(Scope.size ~ Sex + Treatment.ID + (1|mother), data = f2.outliers)
+
+sumary(m.rand1)
+
+exactRLRT(m.rand1)
+
+# Mother random effect not significant - likely because there were not enough mothers (too few groups for the factor) for there to be enough variation. Likely there is a small amount of estimated variance in adult size due to mother, but it isn't detectable here due to the small number of mothers.
+
+ggplot(f2.outliers, aes(x = Treatment.ID, y = BB.weight)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
+
+ggplot(f2.outliers, aes(x = Treatment.ID, y = Scope.size)) + geom_boxplot() + geom_signif(comparisons = list(c("gg","gs")), test = "wilcox.test", map_signif_level = FALSE, textsize = 7, vjust = +0.1)
+
+# So, here's the maternal effect. gs mothers make very slightly smaller brood balls. But, this is probably overwhelmed by the fact that the difference in adult size between treatments is more significant and in the same direction. So these two things (treatment ID and bb size) are explaining similar variation, but treatment ID explains more of it with regards to final adult size.
+
+ggplot(f2.outliers, aes(x = BB.weight, y = Scope.size, color = Treatment.ID)) + geom_point() + geom_smooth(method = "lm")
+
+ggplot(f2.outliers, aes(x = Maternal.size, y = Scope.size)) + geom_point() + geom_jitter() + geom_smooth(method = "lm")
+
+ggplot(f2.validate, aes(x = Maternal.size, y = Scope.size)) + geom_point() + geom_jitter() + geom_smooth(method = "lm")
+
 ```
+
+```{r}
+
+glm.survival <- glm(formula = cbind(Dead. == "",Dead. == "y") ~ Sex + Treatment.ID + BB.weight + Treatment.ID:BB.weight + Sex:Treatment.ID,family = binomial, data = f2)
+
+sumary(glm.survival)
+
+glm.survival.2 <- glm(formula = cbind(Dead. == "",Dead. == "y") ~ Sex + Treatment.ID,family = binomial, data = f2)
+
+sumary(glm.survival.2)
+
+glm.survival.3 <- glm(formula = cbind(Dead. == "",Dead. == "y") ~ Treatment.ID,family = binomial, data = f2)
+
+sumary(glm.survival.3)
+
+pchisq(deviance(glm.survival.3),df.residual(glm.survival.3), lower = FALSE)
+
+pchisq(110.21599 - 107.31538, 3, lower = FALSE)
+
+```
+
 
 ```{r}
 
@@ -246,5 +377,8 @@ treat <- visreg(m6, "Treatment.ID", gg = TRUE) + theme_Publication()+
   labs(x = "", y = "") + ylim(5.9,7.6)
 
 grid.arrange(sex,treat, ncol = 2)
+
+visreg(m4, "BB.weight", gg = TRUE) + theme_Publication() + 
+    labs(x = "BB.weight", y = "Scope Size") + ylim(5.9,7.6)
 
 ```

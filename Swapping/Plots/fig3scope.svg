@@ -14,7 +14,7 @@
    version="1.1"
    id="svg563"
    sodipodi:docname="fig3scope.svg"
-   inkscape:version="0.92.2 (unknown)"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    inkscape:export-filename="/media/removable/USB Drive/Research/fig3scope.png"
    inkscape:export-xdpi="600"
    inkscape:export-ydpi="600">
@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,8 +39,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="1000"
+     inkscape:window-width="1280"
+     inkscape:window-height="975"
      id="namedview565"
      showgrid="true"
      inkscape:snap-bbox="false"
@@ -51,11 +51,11 @@
      inkscape:snap-grids="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="1.1"
+     inkscape:zoom="0.6"
      inkscape:cx="653.67226"
      inkscape:cy="320.64684"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-x="1280"
+     inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg563"
      fit-margin-top="1"
@@ -1598,7 +1598,10 @@
      xml:space="preserve"
      id="flowRoot6543"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0,-0.75000001,0.75000001,0,-5.2179987,442.17488)"><flowRegion
+     transform="matrix(0,-0.75000001,0.75000001,0,-5.2179987,442.17488)"
+     inkscape:export-filename="/Users/Moczeklab/Desktop/fig3scope.unbold.png"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"><flowRegion
        id="flowRegion6545"><rect
          id="rect6547"
          width="398.97556"
@@ -1606,7 +1609,7 @@
          x="101.02445"
          y="37.726738" /></flowRegion><flowPara
        id="flowPara6549"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle">Adult size</flowPara></flowRoot>  <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Adult size</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot1365"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1618,7 +1621,7 @@
          x="72.5625"
          y="936.77081" /></flowRegion><flowPara
        id="flowPara1371"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle">Sex</flowPara></flowRoot>  <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Sex</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot1381"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -1630,4 +1633,4 @@
          x="572.5625"
          y="936.77081" /></flowRegion><flowPara
        id="flowPara1387"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle">Microbiome origin</flowPara></flowRoot></svg>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Microbiota origin</flowPara></flowRoot></svg>

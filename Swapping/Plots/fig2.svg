@@ -14,10 +14,10 @@
    version="1.1"
    id="svg220"
    sodipodi:docname="fig2.svg"
-   inkscape:version="0.92.2 (unknown)"
-   inkscape:export-filename="/media/removable/USB Drive/Research/fig2.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:export-filename="/Volumes/NO NAME/Research/Swapping/Plots/fig2.unbold.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <metadata
      id="metadata224">
     <rdf:RDF>
@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,18 +39,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="1000"
+     inkscape:window-width="1280"
+     inkscape:window-height="975"
      id="namedview222"
      showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-text-baseline="true"
-     inkscape:zoom="0.76"
+     inkscape:zoom="0.6"
      inkscape:cx="516.26411"
-     inkscape:cy="626.06852"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:cy="520.80536"
+     inkscape:window-x="1280"
+     inkscape:window-y="23"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg220"
      fit-margin-top="1"
@@ -58,7 +58,15 @@
      fit-margin-bottom="1"
      fit-margin-right="1"
      units="cm"
-     inkscape:bbox-nodes="true" />
+     inkscape:bbox-nodes="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="266.07744,107.27854"
+       orientation="0,1"
+       id="guide137"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <defs
      id="defs79">
     <g
@@ -577,7 +585,7 @@
          x="65.895844"
          y="7.8947368" /></flowRegion><flowPara
        id="flowPara232"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle">Survival rate</flowPara></flowRoot>  <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Survival rate</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot4039"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -589,7 +597,7 @@
          x="77.654846"
          y="933.01184" /></flowRegion><flowPara
        id="flowPara4045"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle">Host species</flowPara></flowRoot>  <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Host species</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot4047"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -604,7 +612,7 @@
      xml:space="preserve"
      id="flowRoot4055"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0.75,0,0,0.75,45.795359,39.708113)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,39.437615,45.140467)"><flowRegion
        id="flowRegion4057"><rect
          id="rect4059"
          width="449.97672"
@@ -613,11 +621,11 @@
          y="933.01184"
          ry="23.625675" /></flowRegion><flowPara
        id="flowPara4061"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';text-align:center;text-anchor:middle">O. gazella</flowPara></flowRoot>  <flowRoot
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666412px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';text-align:center;text-anchor:middle">O. gazella</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot4063"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="matrix(0.75,0,0,0.75,13.193232,36.373029)"><flowRegion
+     transform="matrix(0.75,0,0,0.75,6.7690837,43.255212)"><flowRegion
        id="flowRegion4065"><rect
          id="rect4067"
          width="452.63159"
@@ -625,7 +633,7 @@
          x="530.26318"
          y="935.52631" /></flowRegion><flowPara
        id="flowPara4069"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';text-align:center;text-anchor:middle">O. sagittarius</flowPara></flowRoot>  <g
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666412px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';text-align:center;text-anchor:middle">O. sagittarius</flowPara></flowRoot>  <g
      id="g263"
      transform="translate(-172.36304,25.912178)">
     <path
