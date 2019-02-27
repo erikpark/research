@@ -1,0 +1,28 @@
+sample-id,absolute-filepath,direction
+E.fulvus.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ef_10-20_S9_L001_R1_001.fastq.gz,forward
+E.fulvus.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ef_10-20_S9_L001_R2_001.fastq.gz,reverse
+E.fulvus.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ef_8-11_S8_L001_R1_001.fastq.gz,forward
+E.fulvus.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ef_8-11_S8_L001_R2_001.fastq.gz,reverse
+E.fulvus.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ef_8-9_S7_L001_R1_001.fastq.gz,forward
+E.fulvus.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ef_8-9_S7_L001_R2_001.fastq.gz,reverse
+O.hecate.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Oh_11-3-1_S4_L001_R1_001.fastq.gz,forward
+O.hecate.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Oh_11-3-1_S4_L001_R2_001.fastq.gz,reverse
+O.hecate.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Oh_1-26-1_S5_L001_R1_001.fastq.gz,forward
+O.hecate.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Oh_1-26-1_S5_L001_R2_001.fastq.gz,reverse
+O.hecate.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Oh_1-26-2_S6_L001_R1_001.fastq.gz,forward
+O.hecate.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Oh_1-26-2_S6_L001_R2_001.fastq.gz,reverse
+O.taurus.WV.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_10-20_S1_L001_R1_001.fastq.gz,forward
+O.taurus.WV.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_10-20_S1_L001_R2_001.fastq.gz,reverse
+O.taurus.WV.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_11-3-1_S2_L001_R1_001.fastq.gz,forward
+O.taurus.WV.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_11-3-1_S2_L001_R2_001.fastq.gz,reverse
+O.taurus.WV.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_11-3-2_S3_L001_R1_001.fastq.gz,forward
+O.taurus.WV.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_11-3-2_S3_L001_R2_001.fastq.gz,reverse
+O.taurus.MED.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_12-1_S12_L001_R1_001.fastq.gz,forward
+O.taurus.MED.1,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_11-1_S12_L001_R2_001.fastq.gz,reverse
+O.taurus.MED.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_810-20_S11_L001_R1_001.fastq.gz,forward
+O.taurus.MED.2,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_810-20_S11_L001_R2_001.fastq.gz,reverse
+O.taurus.MED.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_8-11_S10_L001_R1_001.fastq.gz,forward
+O.taurus.MED.3,/media/removable/USBDRIVEONE/Research/Sequences/EUS and MED/Demultiplexed reads/GSF1886-Moczek-v2-Ot_8-11_S10_L001_R2_001.fastq.gz,reverse
+
+
+

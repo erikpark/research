@@ -1,0 +1,13 @@
+SampleID,Region,Species,Month,Day,Year,Introduction status,faithpd,pielouevenness
+E.fulvus.1,MED,fulvus,10,20,2017,Native,40.98013361,0.759891293
+E.fulvus.2,MED,fulvus,8,11,2017,Native,39.73484199,0.642888678
+E.fulvus.3,MED,fulvus,8,9,2017,Native,42.58792903,0.773830582
+O.taurus.MED.1,MED,taurus,12,1,2017,Native,21.50366915,0.782226058
+O.taurus.MED.2,MED,taurus,10,20,2017,Native,27.62059739,0.819760855
+O.taurus.MED.3,MED,taurus,8,11,2017,Native,36.30356124,0.802534055
+O.hecate.1,EUS,hecate,11,3,2017,Native,37.66897594,0.50055138
+O.hecate.2,EUS,hecate,1,26,2018,Native,35.35001145,0.380700203
+O.hecate.3,EUS,hecate,1,26,2018,Native,27.58308993,0.899598368
+O.taurus.WV.1,EUS,taurus,10,20,2017,Introduced,31.88051655,0.544103971
+O.taurus.WV.2,EUS,taurus,11,3,2017,Introduced,33.3885522,0.586365468
+O.taurus.WV.3,EUS,taurus,11,3,2017,Introduced,44.71024225,0.532981506

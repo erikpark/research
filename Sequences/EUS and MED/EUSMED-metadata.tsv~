@@ -1,0 +1,14 @@
+SampleID	Region	Species	Month	Day	Year	Introduction status
+#q2:types	categorical	categorical	numeric	numeric	numeric	categorical
+E.fulvus.1	MED	E. fulvus	10	20	2017	Native
+E.fulvus.2	MED	E. fulvus	8	11	2017	Native
+E.fulvuls.3	MED	E. fulvus	8	9	2017	Native
+O.taurus.MED.1	MED	O. taurus	12	1	2017	Native
+O.taurus.MED.2	MED	O. taurus	10	20	2017	Native
+O.taurus.MED.3	MED	O. taurus	8	11	2017	Native
+O.hecate.1	EUS	O. hecate	11	3	2017	Native
+O.hecate.2	EUS	O. hecate	1	26	2018	Native
+O.hecate.3	EUS	O. hecate	1	26	2018	Native
+O.taurus.WV.1	EUS	O. taurus	10	20	2017	Introduced
+O.taurus.WV.2	EUS	O. taurus	11	3	2017	Introduced
+O.taurus.WV.3	EUS	O. taurus	11	3	2017	Introduced

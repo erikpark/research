@@ -1,0 +1,314 @@
+# Start conda environment
+
+source activate qiime2-2019.1
+
+#Set larger TMPDIR (to use if doing on laptop)
+
+$  export TMPDIR=/media/removable/USBDRIVEONE/Research/Sequences/EUS\ and\ MED/
+
+
+#Importing demultiplexed reads
+
+$ qiime tools import \
+   --type 'SampleData[PairedEndSequencesWithQuality]' \
+   --input-path pe-33-manifest \
+   --output-path paired-end-demux.qza \
+   --source-format PairedEndFastqManifestPhred33
+
+ 
+#Generating visualization of demuxed sequences .qza
+
+$ qiime demux summarize \
+ --i-data paired-end-demux.qza \
+ --o-visualization paired-end-demux.qzv
+
+
+#Viewing visualization, two options
+
+1.
+$ qiime tools view paired-end-demux.qzv
+
+2. 
+Import .qzv to https://view.qiime2.org/
+
+
+#Denoise and join paired-end reads using DADA2
+# Primers seem to be removed, checked with below to look for sequence from reverse primer, and then again with sequence from forward primer
+# No lines found
+$grep 'GGACTACHVGGG' ./GSF1886-Moczek-v2-Ef_10-20_S9_L001_R2_001.fastq.gz | wc -l
+# Also seems to be that the EMP primers are designed in such a way that they aren't sequenced.
+# Will just trim ~10 bases from both forward and reverse then
+
+
+$ qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs paired-end-demux.qza \
+  --p-trim-left-f 10 \
+  --p-trim-left-r 10 \
+  --p-trunc-len-f 250 \
+  --p-trunc-len-r 250 \
+  --p-n-threads 0\
+  --o-table table.qza \
+  --o-representative-sequences rep-seqs.qza \
+  --o-denoising-stats denoising-stats.qza \
+  --verbose
+
+
+#Generating summaries of the feature table, feature sequences, and denoising stats
+
+$ qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file EUSMED-metadata.tsv \
+  --verbose
+
+$ qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
+
+$ qiime metadata tabulate \
+  --m-input-file denoising-stats.qza \
+  --o-visualization denoising-stats.qzv
+
+
+#Generating phylogenetic tree
+
+$ qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --o-rooted-tree rooted-tree.qza
+
+
+
+
+
+#Alpha and beta diversity analysis
+# First need to decide sampling depth
+# Will do this using Alpha rarefaction plotting, directly below.
+# Determine max depth from median value of frequency per sample from table.qzv. Is 442,382.
+
+$qiime diversity alpha-rarefaction \
+  --i-table table.qza \
+  --i-phylogeny rooted-tree.qza \
+  --p-max-depth 442382 \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization alpha-rarefaction.qzv
+
+# From rarefaction curves (alpha-rarefaction.qzv), see leveling off starting at around 50,000 sequencing depth. Fully leveled off around 200,000.
+# So, based on the curves, sampling depth should be ~200,000 (224980 exactly) which is also roughly the minimum sequence count seen (in sample Ot med 2).
+
+$ qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny rooted-tree.qza \
+  --i-table table.qza \
+  --p-sampling-depth 224980 \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --output-dir core-metrics-results \
+  --verbose
+
+
+#Microbial compositions of samples, first in terms of associations between categorical metadata columns and alpha diversity data.
+
+$ qiime diversity alpha-group-significance \
+  --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization core-metrics-results/faith-pd-group-significance.qzv
+
+$ qiime diversity alpha-group-significance \
+  --i-alpha-diversity core-metrics-results/evenness_vector.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization core-metrics-results/evenness-group-significance.qzv
+
+# Basically, EUS samples are less even than MED ones (not significant at 0.05 though, but).
+# EUS taurus generally have higher species richness than MED taurus. Also EUS fulvus have
+# really high richness.
+
+
+#Now in terms of associations between continuous metadata columns and alpha diversity data.
+
+$ qiime diversity alpha-correlation \
+  --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization core-metrics-results/faith-pd-alpha-correlation.qzv
+
+$ qiime diversity alpha-correlation \
+  --i-alpha-diversity core-metrics-results/evenness_vector.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization core-metrics-results/evenness-alpha-correlation.qzv
+
+# No real discernible correlation between extraction date and evenness or alpha-diversity
+
+
+#Taxonomic analysis
+# Assign 99% OTU identity to the sequences using pretrained greengenes classifier speficially for the primers I used.
+
+$ qiime feature-classifier classify-sklearn \
+  --i-classifier gg-13-8-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification taxonomy.qza
+
+$ qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
+  
+
+# Generate interactive barplots of the taxonomic composition of samples
+
+$ qiime taxa barplot \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization taxa-bar-plots.qzv
+
+#Statistical test of differential abundances of different sequences across samples.
+# See from taxonomic barplots that there are different abundances of sequences between samples. But want to know exactly which sequences are statistically different between species.
+
+# Will do using ANCOM (Analysis of composition of microbiomes) at a specific taxa level (here will do level 6)
+
+$ qiime taxa collapse \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-level 6 \
+  --o-collapsed-table collapsed-table-l6.qza
+
+# Below to add 1's to count data because ANCOM can't tolerate fequencies of 0 in count data.
+
+$ qiime composition add-pseudocount \
+  --i-table collapsed-table-l6.qza \
+  --o-composition-table comp-table-l6.qza
+
+$ qiime composition ancom \
+  --i-table comp-table-l6.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --m-metadata-column Species \
+  --o-visualization l6-ancom-Species.qzv
+
+# Here level 5
+
+$ qiime taxa collapse \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-level 5 \
+  --o-collapsed-table collapsed-table-l5.qza
+
+$ qiime composition add-pseudocount \
+  --i-table collapsed-table-l5.qza \
+  --o-composition-table comp-table-l5.qza
+
+$ qiime composition ancom \
+  --i-table comp-table-l5.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --m-metadata-column Species \
+  --o-visualization l5-ancom-Species.qzv
+
+# And level 4 to finish out
+
+$ qiime taxa collapse \
+  --i-table table.qza \
+  --i-taxonomy taxonomy.qza \
+  --p-level 4 \
+  --o-collapsed-table collapsed-table-l4.qza
+
+$ qiime composition add-pseudocount \
+  --i-table collapsed-table-l4.qza \
+  --o-composition-table comp-table-l4.qza
+
+$ qiime composition ancom \
+  --i-table comp-table-l4.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --m-metadata-column Species \
+  --o-visualization l4-ancom-Species.qzv
+
+
+
+
+#Redo Taxonomic analysis with different reference database to compare results
+# Assign 99% OTU identity to the sequences using pretrained SILVA classifier speficially for the primers I used.
+
+
+$ qiime feature-classifier classify-sklearn \
+  --i-classifier silva-132-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification silva.taxonomy.qza
+
+$ qiime metadata tabulate \
+  --m-input-file silva.taxonomy.qza \
+  --o-visualization silva.taxonomy.qzv
+  
+  
+# After going through the below processes, noticed chloroplastic sequences in the taxa barplot. Will remove with this below command.
+
+$ qiime taxa filter-table \
+  --i-table table.qza \
+  --i-taxonomy silva.taxonomy.qza \
+  --p-exclude mitochondria,chloroplast \
+  --o-filtered-table table-no-mitochondria-no-chloroplast.qza
+  
+# Can then generate another bar plot with this new filtered table
+
+$ qiime taxa barplot \
+  --i-table table-no-mitochondria-no-chloroplast.qza \
+  --i-taxonomy silva.taxonomy.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization silva.taxa-bar-plots-no-mito-chloro.qzv
+
+# Generate interactive barplots of the taxonomic composition of samples
+
+$ qiime taxa barplot \
+  --i-table table.qza \
+  --i-taxonomy silva.taxonomy.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --o-visualization silva.taxa-bar-plots.qzv
+
+#Statistical test of differential abundances of different sequences across samples, by species, for SILVA.
+
+$ qiime taxa collapse \
+  --i-table table-no-mitochondria-no-chloroplast.qza \
+  --i-taxonomy silva.taxonomy.qza \
+  --p-level 6 \
+  --o-collapsed-table silva.collapsed-table-l6.qza
+
+$ qiime composition add-pseudocount \
+  --i-table silva.collapsed-table-l6.qza \
+  --o-composition-table silva.comp-table-l6.qza
+
+$ qiime composition ancom \
+  --i-table silva.comp-table-l6.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --m-metadata-column Species \
+  --o-visualization silva.l6-ancom-Species.qzv
+
+#Statistical test of differential abundances of different sequences across samples, by region, for SILVA.
+
+$ qiime composition ancom \
+  --i-table silva.comp-table-l6.qza \
+  --m-metadata-file EUSMED-metadata.tsv \
+  --m-metadata-column Region \
+  --o-visualization silva.l6-ancom-Region.qzv
+
+
+#Preparing data to import into themetagenomics
+# First will export the filtered table and taxonomy as .biom files
+
+$ qiime tools export \
+ --input-path table-no-mitochondria-no-chloroplast.qza \
+ --output-path exported 
+
+$ qiime tools export \
+ --input-path silva.taxonomy.qza \
+ --output-path exported
+
+# Now need to add prepare taxonomy file and then add it to the new .biom file
+# Done with emacs - changed the first line of the header to #OTUID	taxonomy	confidence
+# Now will add the taxonomy data to the .biom file
+
+$ biom add-metadata -i exported/feature-table.biom -o exported/table-with-taxonomy.biom --observation-metadata-fp exported/biom-taxonomy.tsv --sc-separated exported/taxonomy
+
+# And now converting the final .biom file to .tsv format
+
+biom convert -i table-with-taxonomy.biom -o table-with-taxonomy.txt --to-tsv --header-key taxonomy
+
+# Now import into R and continue analysis there following https://cran.r-project.org/web/packages/themetagenomics/vignettes/thematic_structure.html
+
+
+
