@@ -1,5 +1,6 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-Sequences/Demultiplexed.reads/
+*.Rproj.user
+*.Rhistory
+*.RData
+*.Ruserdata
+*.fastq.gz
+paired-end-demux.qzv
