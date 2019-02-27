@@ -3,4 +3,4 @@
 *.RData
 *.Ruserdata
 *.fastq.gz
-paired-end-demux.qzv
+paired-end-demux.qza
