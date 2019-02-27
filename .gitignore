@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 *.Rproj.user
 *.Rhistory
 *.RData
 *.Ruserdata
 *.fastq.gz
 paired-end-demux.qzv
+=======
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.fastq.gz
+paired-end-demux.qza
+>>>>>>> f0255b283457d93e7e9474cd79398efadef6df4a
