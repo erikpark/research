@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18.583645cm"
+   height="17.871531cm"
+   viewBox="0 0 526.78049 506.59456"
+   version="1.1"
+   id="svg563"
+   sodipodi:docname="fig3.transparent.svg"
+   inkscape:version="0.92.4 (unknown)"
+   inkscape:export-filename="/home/erikpark/external/Research/Swapping/Species/Plots/f3.transparent.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
+  <metadata
+     id="metadata567">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1829"
+     inkscape:window-height="1075"
+     id="namedview565"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-grids="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.2"
+     inkscape:cx="401.56823"
+     inkscape:cy="339.18194"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg563"
+     fit-margin-top="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1"
+     fit-margin-left="1"
+     units="cm"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid581"
+       dotted="true"
+       originx="-387.39406"
+       originy="68.797922" />
+    <sodipodi:guide
+       position="-142.26906,89.975671"
+       orientation="0,1"
+       id="guide607"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs76">
+    <g
+       id="g32">
+      <symbol
+         overflow="visible"
+         id="glyph0-0"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d=""
+           id="path2"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-1"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="m 5.875,-2.59375 c 0,-1.484375 -1.140625,-2.625 -2.5625,-2.625 -0.78125,0 -1.5,0.34375 -1.921875,0.921875 L 1.625,-4.1875 c 0.015625,-1.9375 0.5,-2.875 1.640625,-2.875 0.6875,0 1.03125,0.296875 1.21875,1.1875 h 1.25 c -0.21875,-1.421875 -1.203125,-2.34375 -2.40625,-2.34375 -1.84375,0 -2.984375,1.703125 -2.984375,4.46875 0,2.46875 0.984375,3.921875 2.796875,3.921875 1.515625,0 2.734375,-1.21875 2.734375,-2.765625 z m -1.28125,0.078125 c 0,0.984375 -0.53125,1.53125 -1.4375,1.53125 -0.921875,0 -1.46875,-0.578125 -1.46875,-1.59375 0,-0.984375 0.53125,-1.484375 1.5,-1.484375 0.953125,0 1.40625,0.484375 1.40625,1.546875 z m 0,0"
+           id="path5"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-2"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="M 2.28125,-0.140625 V -1.4375 H 0.828125 V 0 H 2.28125 Z m 0,0"
+           id="path8"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-3"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="m 5.8125,-3.953125 c 0,-2.75 -1,-4.265625 -2.734375,-4.265625 -1.71875,0 -2.734375,1.53125 -2.734375,4.203125 0,2.671875 1.03125,4.1875 2.734375,4.1875 1.6875,0 2.734375,-1.515625 2.734375,-4.125 z m -1.28125,-0.09375 c 0,2.25 -0.375,3.109375 -1.46875,3.109375 -1.046875,0 -1.4375,-0.90625 -1.4375,-3.078125 0,-2.171875 0.390625,-3.046875 1.453125,-3.046875 1.0625,0 1.453125,0.890625 1.453125,3.015625 z m 0,0"
+           id="path11"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-4"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="m 5.875,-2.765625 c 0,-1.5625 -1.171875,-2.75 -2.6875,-2.75 -0.5625,0 -1.109375,0.1875 -1.296875,0.328125 l 0.25,-1.609375 H 5.46875 V -8.0625 H 1.109375 L 0.46875,-3.625 H 1.609375 C 2.09375,-4.203125 2.390625,-4.359375 3,-4.359375 c 1.0625,0 1.59375,0.546875 1.59375,1.734375 0,1.140625 -0.515625,1.640625 -1.59375,1.640625 -0.859375,0 -1.25,-0.296875 -1.515625,-1.328125 H 0.21875 c 0.359375,1.71875 1.390625,2.484375 2.8125,2.484375 1.59375,0 2.84375,-1.265625 2.84375,-2.9375 z m 0,0"
+           id="path14"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-5"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="M 5.953125,-7.078125 V -8.0625 H 0.375 v 1.265625 H 4.515625 C 3.125,-5.046875 1.953125,-2.625 1.359375,0 H 2.71875 C 3.171875,-2.703125 4.25,-5 5.953125,-7.03125 Z m 0,0"
+           id="path17"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-6"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="M 3.03125,-5.25 V -6.15625 H 2.046875 v -0.765625 c 0,-0.390625 0.09375,-0.453125 0.515625,-0.453125 0.078125,0 0.109375,0 0.46875,0.015625 v -1.03125 C 2.671875,-8.46875 2.546875,-8.484375 2.359375,-8.484375 1.5,-8.484375 0.84375,-7.84375 0.84375,-7 v 0.84375 H 0.0625 v 1.046875 H 0.84375 V 0 H 2.046875 V -5.109375 H 3.03125 Z m 0,0"
+           id="path20"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-7"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="M 8.65625,-0.140625 V -4.53125 c 0,-1.0625 -0.71875,-1.78125 -1.828125,-1.78125 -0.78125,0 -1.34375,0.28125 -1.78125,0.796875 C 4.765625,-6 4.21875,-6.3125 3.453125,-6.3125 c -0.78125,0 -1.40625,0.328125 -1.90625,1.03125 L 1.78125,-5.171875 V -6.15625 h -1.125 V 0 h 1.203125 v -3.8125 c 0,-0.859375 0.484375,-1.40625 1.25,-1.40625 0.6875,0 0.9375,0.296875 0.9375,1.046875 V 0 H 5.25 v -3.8125 c 0,-0.859375 0.5,-1.40625 1.265625,-1.40625 0.671875,0 0.921875,0.296875 0.921875,1.046875 V 0 h 1.21875 z m 0,0"
+           id="path23"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-8"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="m 5.609375,-1.09375 v -5.0625 H 4.46875 v 1 L 4.703125,-5.25 c -0.46875,-0.703125 -1.125,-1.0625 -1.875,-1.0625 -1.5,0 -2.65625,1.390625 -2.65625,3.296875 0,1.84375 1.1875,3.1875 2.578125,3.1875 0.734375,0 1.34375,-0.34375 1.953125,-1.09375 L 4.46875,-1.015625 V -0.625 c 0,1.5625 -0.484375,2 -1.578125,2 -0.734375,0 -1.171875,-0.125 -1.3125,-0.984375 h -1.21875 c 0.109375,1.25 1.125,2.046875 2.5,2.046875 1.828125,0 2.75,-0.953125 2.75,-3.53125 z M 4.375,-3.03125 c 0,1.390625 -0.453125,2.0625 -1.4375,2.0625 -1.015625,0 -1.5,-0.671875 -1.5,-2.09375 0,-1.421875 0.484375,-2.109375 1.484375,-2.109375 1.015625,0 1.453125,0.71875 1.453125,2.140625 z m 0,0"
+           id="path26"
+           inkscape:connector-curvature="0" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="glyph0-9"
+         style="overflow:visible">
+        <path
+           style="stroke:none"
+           d="m 5.28125,-1.78125 c 0,-0.875 -0.625,-1.453125 -1.796875,-1.734375 L 2.59375,-3.734375 c -0.765625,-0.171875 -0.953125,-0.28125 -0.953125,-0.6875 0,-0.546875 0.34375,-0.75 1.109375,-0.75 0.75,0 1,0.1875 1.03125,0.9375 H 5.046875 C 5.03125,-5.515625 4.140625,-6.3125 2.78125,-6.3125 c -1.375,0 -2.40625,0.84375 -2.40625,1.9375 0,0.90625 0.625,1.484375 2.015625,1.828125 l 0.875,0.203125 c 0.640625,0.15625 0.75,0.21875 0.75,0.640625 0,0.546875 -0.390625,0.734375 -1.21875,0.734375 -0.84375,0 -1.171875,-0.0625 -1.3125,-1.109375 h -1.25 c 0.046875,1.5 0.953125,2.25 2.484375,2.25 1.484375,0 2.5625,-0.828125 2.5625,-1.953125 z m 0,0"
+           id="path29"
+           inkscape:connector-curvature="0" />
+      </symbol>
+    </g>
+    <clipPath
+       id="clip1">
+      <path
+         d="M 54.421875,28.347656 H 436 V 365 H 54.421875 Z m 0,0"
+         id="path34"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip2">
+      <path
+         d="M 54.421875,330 H 436.82422 v 2 H 54.421875 Z m 0,0"
+         id="path37"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip3">
+      <path
+         d="M 54.421875,240 H 436.82422 v 2 H 54.421875 Z m 0,0"
+         id="path40"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip4">
+      <path
+         d="M 54.421875,150 H 436.82422 v 3 H 54.421875 Z m 0,0"
+         id="path43"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip5">
+      <path
+         d="M 54.421875,61 H 436.82422 v 2 H 54.421875 Z m 0,0"
+         id="path46"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip6">
+      <path
+         d="m 148,28.347656 h 2 V 365.57812 h -2 z m 0,0"
+         id="path49"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip7">
+      <path
+         d="m 340,28.347656 h 2 V 365.57812 h -2 z m 0,0"
+         id="path52"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip8">
+      <path
+         d="M 504.42187,28.347656 H 886 V 365 H 504.42187 Z m 0,0"
+         id="path55"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip9">
+      <path
+         d="m 504.42187,330 h 382.40235 v 2 H 504.42187 Z m 0,0"
+         id="path58"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip10">
+      <path
+         d="m 504.42187,240 h 382.40235 v 2 H 504.42187 Z m 0,0"
+         id="path61"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip11">
+      <path
+         d="m 504.42187,150 h 382.40235 v 3 H 504.42187 Z m 0,0"
+         id="path64"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip12">
+      <path
+         d="m 504.42187,61 h 382.40235 v 2 H 504.42187 Z m 0,0"
+         id="path67"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip13">
+      <path
+         d="m 598,28.347656 h 2 V 365.57812 h -2 z m 0,0"
+         id="path70"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip14">
+      <path
+         d="m 790,28.347656 h 2 V 365.57812 h -2 z m 0,0"
+         id="path73"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <g
+     id="g318"
+     style="fill:#000000;fill-opacity:1"
+     transform="translate(-387.39406,25.796657)" />
+  <g
+     style="clip-rule:nonzero"
+     id="g328"
+     clip-path="url(#clip9)"
+     transform="translate(-387.39406,25.796657)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png">
+    <path
+       inkscape:connector-curvature="0"
+       id="path326"
+       d="M 504.42187,331.3125 H 885.82812"
+       style="fill:none;stroke:#f0f0f0;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+  <g
+     style="clip-rule:nonzero"
+     id="g332"
+     clip-path="url(#clip10)"
+     transform="translate(-387.39406,25.796657)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png">
+    <path
+       inkscape:connector-curvature="0"
+       id="path330"
+       d="M 504.42187,241.41016 H 885.82812"
+       style="fill:none;stroke:#f0f0f0;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+  <g
+     style="clip-rule:nonzero"
+     id="g336"
+     clip-path="url(#clip11)"
+     transform="translate(-387.39406,25.796657)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png">
+    <path
+       inkscape:connector-curvature="0"
+       id="path334"
+       d="M 504.42187,151.51172 H 885.82812"
+       style="fill:none;stroke:#f0f0f0;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+  <g
+     style="clip-rule:nonzero"
+     id="g340"
+     clip-path="url(#clip12)"
+     transform="translate(-387.39406,25.796657)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png">
+    <path
+       inkscape:connector-curvature="0"
+       id="path338"
+       d="M 504.42187,61.609375 H 885.82812"
+       style="fill:none;stroke:#f0f0f0;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+  <g
+     style="clip-rule:nonzero"
+     id="g344"
+     clip-path="url(#clip13)"
+     transform="translate(-387.39406,25.796657)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png">
+    <path
+       inkscape:connector-curvature="0"
+       id="path342"
+       d="M 598.8125,364.57812 V 28.347656"
+       style="fill:none;stroke:#f0f0f0;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+  <g
+     style="clip-rule:nonzero"
+     id="g348"
+     clip-path="url(#clip14)"
+     transform="translate(-387.39406,25.796657)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png">
+    <path
+       inkscape:connector-curvature="0"
+       id="path346"
+       d="M 791.4375,364.57812 V 28.347656"
+       style="fill:none;stroke:#f0f0f0;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
+  </g>
+  <path
+     inkscape:connector-curvature="0"
+     id="path350"
+     d="M 134.36766,231.51933 H 288.46922 V 201.71464 H 134.36766 Z m 0,0"
+     style="fill:#d9d9d9;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path352"
+     d="M 326.99266,272.72245 H 481.09813 V 240.07011 H 326.99266 Z m 0,0"
+     style="fill:#d9d9d9;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path354"
+     d="M 134.36766,216.61698 H 288.46922"
+     style="fill:none;stroke:#0087ff;stroke-width:2.13395691;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:1;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path356"
+     d="M 326.99266,256.39823 H 481.09813"
+     style="fill:none;stroke:#0087ff;stroke-width:2.13395691;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:1;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path358"
+     d="m 139.42625,160.22636 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path360"
+     d="m 143.27781,204.78104 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path362"
+     d="m 147.13328,231.42948 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path364"
+     d="m 150.98485,189.67948 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path366"
+     d="m 154.83641,219.20292 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.61328 2.41406,-1.61328 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path368"
+     d="m 158.68797,218.26542 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path370"
+     d="m 162.54344,268.07011 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path372"
+     d="m 166.395,227.65214 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path374"
+     d="m 170.24656,152.82011 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.61328 2.41406,-1.61328 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path376"
+     d="m 174.09813,239.8787 c 0,1.60938 -2.41407,1.60938 -2.41407,0 0,-1.60937 2.41407,-1.60937 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path378"
+     d="m 177.9536,199.74589 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path380"
+     d="m 181.80516,207.33573 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path382"
+     d="m 185.65672,220.42558 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.61329 2.41406,-1.61329 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path384"
+     d="m 189.50828,234.30448 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path386"
+     d="m 193.36375,217.40214 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path388"
+     d="m 197.21531,219.38261 c 0,1.60937 -2.41796,1.60937 -2.41796,0 0,-1.61328 2.41796,-1.61328 2.41796,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path390"
+     d="m 201.06688,189.49979 c 0,1.60938 -2.41407,1.60938 -2.41407,0 0,-1.61328 2.41407,-1.61328 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path392"
+     d="m 204.91844,221.53886 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path394"
+     d="m 208.77391,280.15604 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path396"
+     d="m 212.62547,227.65214 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path398"
+     d="m 216.47703,179.28495 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path400"
+     d="m 220.3286,220.0662 c 0,1.60938 -2.41407,1.60938 -2.41407,0 0,-1.61328 2.41407,-1.61328 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path402"
+     d="m 224.18406,235.20292 c 0,1.61328 -2.41796,1.61328 -2.41796,0 0,-1.60938 2.41796,-1.60938 2.41796,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path404"
+     d="m 228.03563,226.35917 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path406"
+     d="m 231.88719,229.59354 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path408"
+     d="m 235.73875,208.23417 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path410"
+     d="m 239.59422,229.44901 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60937 2.41797,-1.60937 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path412"
+     d="m 243.44578,213.80839 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path414"
+     d="m 247.29735,209.09745 c 0,1.60938 -2.41407,1.60938 -2.41407,0 0,-1.60937 2.41407,-1.60937 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path416"
+     d="m 251.14891,193.81229 c 0,1.61329 -2.41406,1.61329 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path418"
+     d="m 255.00438,207.12089 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path420"
+     d="m 258.85594,277.27714 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path422"
+     d="m 262.7075,222.97636 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path424"
+     d="m 266.55906,222.07792 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path426"
+     d="m 270.41453,199.60136 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path428"
+     d="m 274.2661,205.14042 c 0,1.61328 -2.41407,1.61328 -2.41407,0 0,-1.60938 2.41407,-1.60938 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path430"
+     d="m 278.11766,178.89042 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path432"
+     d="m 281.96922,266.45292 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path434"
+     d="m 285.82469,194.17167 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path436"
+     d="m 332.60594,204.06229 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.60937 2.41797,-1.60937 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path438"
+     d="m 337.00828,286.05058 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path440"
+     d="m 341.41063,223.83964 c 0,1.61328 -2.41407,1.61328 -2.41407,0 0,-1.60938 2.41407,-1.60938 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path442"
+     d="m 345.81297,243.07792 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path444"
+     d="m 350.21531,316.07792 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path446"
+     d="m 354.61766,229.95292 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path448"
+     d="m 359.02391,280.33573 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path450"
+     d="m 363.42625,224.41386 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path452"
+     d="m 367.8286,199.92558 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path454"
+     d="m 372.23094,241.3162 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path456"
+     d="m 376.63328,266.45292 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path458"
+     d="m 381.03563,263.61308 c 0,1.60937 -2.41407,1.60937 -2.41407,0 0,-1.60938 2.41407,-1.60938 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path460"
+     d="m 385.43797,207.33573 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.61328 2.41406,-1.61328 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path462"
+     d="m 389.84422,244.19511 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path464"
+     d="m 394.24656,291.12089 c 0,1.61328 -2.41796,1.61328 -2.41796,0 0,-1.60938 2.41796,-1.60938 2.41796,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path466"
+     d="m 398.64891,237.5037 c 0,1.61328 -2.41797,1.61328 -2.41797,0 0,-1.60937 2.41797,-1.60937 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path468"
+     d="m 403.05125,221.71854 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path470"
+     d="m 407.4536,225.99979 c 0,1.60938 -2.41407,1.60938 -2.41407,0 0,-1.61328 2.41407,-1.61328 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path472"
+     d="m 411.85594,233.40604 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path474"
+     d="m 420.66453,246.67558 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path476"
+     d="m 425.06688,269.6912 c 0,1.60938 -2.41797,1.60938 -2.41797,0 0,-1.61328 2.41797,-1.61328 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path478"
+     d="m 429.46922,218.98417 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path480"
+     d="m 433.87156,188.8162 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.61328 2.41406,-1.61328 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path482"
+     d="m 438.27391,257.14042 c 0,1.60937 -2.41406,1.60937 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path484"
+     d="m 442.67625,337.83573 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path486"
+     d="m 447.0825,289.68339 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path488"
+     d="m 451.48485,251.20683 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.60938 2.41797,-1.60938 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path490"
+     d="m 455.88719,262.17558 c 0,1.60937 -2.41797,1.60937 -2.41797,0 0,-1.61329 2.41797,-1.61329 2.41797,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path492"
+     d="m 460.28953,250.81229 c 0,1.60938 -2.41406,1.60938 -2.41406,0 0,-1.61328 2.41406,-1.61328 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path494"
+     d="m 464.69188,275.08573 c 0,1.60938 -2.41407,1.60938 -2.41407,0 0,-1.61328 2.41407,-1.61328 2.41407,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path496"
+     d="m 469.09422,266.84745 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60937 2.41406,-1.60937 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path498"
+     d="m 473.49656,253.90214 c 0,1.61328 -2.41406,1.61328 -2.41406,0 0,-1.60938 2.41406,-1.60938 2.41406,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path500"
+     d="m 477.90281,251.35136 c 0,1.60937 -2.41796,1.60937 -2.41796,0 0,-1.61328 2.41796,-1.61328 2.41796,0"
+     style="fill:#7d7d7d;fill-opacity:1;fill-rule:nonzero;stroke:#7d7d7d;stroke-width:0.70866102;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path502"
+     d="M 117.02781,390.37479 V 54.144313"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path536"
+     d="m 113.54344,357.10917 h 3.48437"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path538"
+     d="m 113.54344,267.20683 h 3.48437"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path540"
+     d="m 113.54344,177.30839 h 3.48437"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path542"
+     d="m 113.54344,87.406032 h 3.48437"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path544"
+     d="M 117.02781,390.37479 H 498.43406"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path546"
+     d="m 211.41844,393.85917 v -3.48438"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path548"
+     d="m 404.04344,393.85917 v -3.48438"
+     style="fill:none;stroke:#000000;stroke-width:1.06697798;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png" />
+  <flowRoot
+     transform="matrix(0.75000001,0,0,0.75000001,-336.58527,-336.31564)"
+     style="font-style:normal;font-weight:normal;font-size:26.66666603px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+     id="flowRoot1413"
+     xml:space="preserve"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png"><flowRegion
+       style="font-size:26.66666603px;text-align:center;text-anchor:middle"
+       id="flowRegion1415"><rect
+         style="font-size:26.66666603px;text-align:center;text-anchor:middle"
+         y="974.5661"
+         x="610.35779"
+         height="61.916969"
+         width="235.33228"
+         id="rect1417" /></flowRegion><flowPara
+       id="flowPara1419"
+       style="font-size:45.33333206px">Self</flowPara></flowRoot>  <flowRoot
+     transform="matrix(0.75000001,0,0,0.75000001,-283.19172,-336.9133)"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     id="flowRoot1421"
+     xml:space="preserve"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png"><flowRegion
+       id="flowRegion1423"><rect
+         y="974.5661"
+         x="812"
+         height="58.446323"
+         width="206.89426"
+         id="rect1425" /></flowRegion><flowPara
+       style="font-size:45.33333206px;text-align:center;text-anchor:middle"
+       id="flowPara1427">Cross</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot6543"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     transform="matrix(0,-0.75000001,0.75000001,0,-4.4484651,497.16678)"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"><flowRegion
+       id="flowRegion6545"><rect
+         id="rect6547"
+         width="534.80884"
+         height="59.29771"
+         x="101.02445"
+         y="37.726738" /></flowRegion><flowPara
+       id="flowPara6549"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Adult Body Size (mm)</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot1381"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     transform="matrix(0.75000001,0,0,0.75000001,-308.5076,-263.67034)"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100"
+     inkscape:export-filename="/media/removable/USB Drive/Research/Swapping/Species/Plots/f3.transparent.png"><flowRegion
+       id="flowRegion1383"><rect
+         id="rect1385"
+         width="497.5921"
+         height="60.263699"
+         x="572.5625"
+         y="936.77081" /></flowRegion><flowPara
+       id="flowPara1387"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">Microbiota origin</flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="73.699692"
+     y="95.450668"
+     id="text192"><tspan
+       sodipodi:role="line"
+       id="tspan190"
+       x="73.699692"
+       y="95.450668"
+       style="font-size:24px;stroke-width:0.75">7.5</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="73.195786"
+     y="185.51122"
+     id="text196"><tspan
+       sodipodi:role="line"
+       id="tspan194"
+       x="73.195786"
+       y="185.51122"
+       style="font-size:24px;stroke-width:0.75">7.0</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="73.699692"
+     y="276.47662"
+     id="text200"><tspan
+       sodipodi:role="line"
+       id="tspan198"
+       x="73.699692"
+       y="276.47662"
+       style="font-size:24px;stroke-width:0.75">6.5</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="73.195786"
+     y="365.84549"
+     id="text204"><tspan
+       sodipodi:role="line"
+       id="tspan202"
+       x="73.195786"
+       y="365.84549"
+       style="font-size:24px;stroke-width:0.75">6.0</tspan></text>
+</svg>
